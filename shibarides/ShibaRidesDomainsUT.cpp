@@ -34,12 +34,8 @@ void TUDominio::failCase(){
         std::string val = this->failValues.at(i);
         try{
             this->domain->setValue(val);
-            std::cout << failValues.at(i) << std::endl;
             this->state = TUDominio::FAIL;
         }catch(std::exception e){
-            std::cout << this->domain->getValue() << std::endl;
-            std::cout << val << std::endl;
-            std::cout << (int)(this->domain->getValue()==val) << std::endl;
             if(this->domain->getValue()==val) this->state = TUDominio::FAIL;
         }
     }
