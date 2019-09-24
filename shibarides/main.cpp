@@ -5,11 +5,15 @@
 using namespace std;
 using namespace shibarides;
 
-int main(){
-    TUAssento tuassento;
+template<class TU>
+void runTest(string label){
+    TU tu;
 
-    int r = tuassento.run();
-    cout << r << endl;
+    cout << "Testing: " << label << endl;
+    cout << "> Result: ";
+
+    int r = tu.run();
+
     switch(r){
     case TUDominio::SUCCESS:
         cout << "SUCCESS" << endl;
@@ -18,8 +22,18 @@ int main(){
         cout << "FAIL" << endl;
         break;
     default:
-        cout << "?" << endl;
+        cout << "UNDEFINED" << endl;
     }
+
+}
+
+int main(){
+    runTest<TUAssento>("Assento");
+    runTest<TUBagagem>("Bagagem");
+    runTest<TUCodDeBanco>("CodDeBanco");
+    runTest<TUCodDeCarona>("CodDeCarona");
+    runTest<TUCodDeReserva>("CodDeReserva");
+    runTest<TUTelefone>("Telefone");
 
     return 0;
 }
