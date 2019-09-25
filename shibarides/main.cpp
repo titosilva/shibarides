@@ -33,10 +33,19 @@ int main(){
     runTest<TUCodDeBanco>("CodDeBanco");
     runTest<TUCodDeCarona>("CodDeCarona");
     runTest<TUCodDeReserva>("CodDeReserva");
-    runTest<TUTelefone>("Telefone");
+    runTest<TUCidade>("Cidade");
+    runTest<TUCPF>("CPF");
+    runTest<TUData>("Data");
+    runTest<TUDuracao>("Duracao");
+    runTest<TUEstado>("Estado");
+    runTest<TUEmail>("Email");
+    runTest<TUNome>("Nome");
     runTest<TUNumDeAgencia>("NumDeAgencia");
     runTest<TUNumDeConta>("NumDeConta");
-    runTest<TUCPF>("CPF");
+    runTest<TUPreco>("Preco");
+    runTest<TUTelefone>("Telefone");
+    runTest<TUSenha>("Senha");
+    runTest<TUVagas>("Vagas");
 
     return 0;
 }

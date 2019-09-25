@@ -44,7 +44,37 @@ private:
     void validate(std::string) throw (std::invalid_argument);
 };
 
+class Cidade : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
 class CPF : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Data : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Duracao : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Estado : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Email : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Nome : public Dominio{
 private:
     void validate(std::string) throw (std::invalid_argument);
 };
@@ -59,7 +89,22 @@ private:
     void validate(std::string) throw (std::invalid_argument);
 };
 
+class Preco : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
 class Telefone : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Senha : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class Vagas : public Dominio{
 private:
     void validate(std::string) throw (std::invalid_argument);
 };
