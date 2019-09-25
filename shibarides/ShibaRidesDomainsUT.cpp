@@ -208,7 +208,7 @@ void TUCidade::genFailValues(){
 }
 
 void TUCidade::genSuccessValues(){
-    this->successValues.push_back("Distrito Federal");
+    this->successValues.push_back("Porto V.");
     this->successValues.push_back("P.O.");
     this->successValues.push_back("Df");
 }
@@ -317,8 +317,9 @@ void TUEstado::genFailValues(){
 }
 
 void TUEstado::genSuccessValues(){
-    this->failValues.push_back("DF");
-    this->failValues.push_back("MG");
+    this->successValues.push_back("DF");
+    this->successValues.push_back("MG");
+    this->successValues.push_back("AC");
 }
 
 // Email
@@ -338,13 +339,14 @@ void TUEmail::genFailValues(){
     this->failValues.push_back("pedrofernandesspark@gmail..com");
     this->failValues.push_back("@@");
     this->failValues.push_back("  @");
-    this->failValues.push_back("pedrifernandesspark.gmail.com");
+    this->failValues.push_back("pedrofernandessparkmaisque20letras@gmail.com");
     this->failValues.push_back("......... ....");
     this->failValues.push_back("aaaaaaaaaaa");
 }
 
 void TUEmail::genSuccessValues(){
-    this->failValues.push_back("pedro.fernandes.spark@gmail.com");
+    this->successValues.push_back("pedrofernandesspark@gmail.com");
+    this->successValues.push_back("crash@shibemail.com");
 }
 
 // Nome
@@ -516,7 +518,7 @@ void TUSenha::genFailValues(){
 }
 
 void TUSenha::genSuccessValues(){
-    this->successValues.push_back("Ss12$");
+    this->successValues.push_back("e34");
 }
 
 // Vagas

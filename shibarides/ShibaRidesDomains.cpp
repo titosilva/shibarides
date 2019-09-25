@@ -147,7 +147,7 @@ void Data::validate(std::string value) throw (std::invalid_argument){
     if (value.length()!=10)throw (std::invalid_argument("Argument must have 10 chars"));
     if((value[0] >= 48 && value[0] <= 57)||(value[1] >= 48 && value[1] <= 57)||(value[3] >= 48 && value[3] <= 57)||
        (value[4] >= 48 && value[4] <= 57)||(value[6] >= 48 && value[6] <= 57)||(value[7] >= 48 && value[7] <= 57)||
-       (value[8] >= 48 && value[8] <= 57)||(value[9] >= 48 && value[9] <= 57) || value[2]==47 || value[5]==47){}
+       (value[8] >= 48 && value[8] <= 57)||(value[9] >= 48 && value[9] <= 57) || value[2]=='/' || value[5]=='/'){}
     else{
         throw (std::invalid_argument("Argument must be DD/MM/AAAA"));
     }
@@ -170,7 +170,7 @@ void Data::validate(std::string value) throw (std::invalid_argument){
         }
        }
 
-    if(value[6]!=2||value[7]!=0)throw (std::invalid_argument("AAAA has to be 2000 to 2099"));
+    if(value[6]!='2'&&value[7]!='0')throw (std::invalid_argument("AAAA has to be 2000 to 2099"));
 
     if(valor%4==0){
         if(value[3]=='0'&&value[4]=='2'){
@@ -200,38 +200,44 @@ void Duracao::validate(std::string value) throw (std::invalid_argument){
 
 // Estado
 void Estado::validate(std::string value) throw (std::invalid_argument){
-    if (value!="AC" && value!="AL" && value!="AP" && value!="AM" && value!="BA" && value!="CE" && value!="DF" &&
-        value!="ES" && value!="GO" && value!="MA" && value!="MT" && value!="MS" && value!="MG" && value!="PA" && value!="PB" &&
-        value!="PR" && value!="PE" && value!="PI" && value!="RJ" && value!="RN" && value!="RS" && value!="RO" && value!="RR" &&
-        value!="SC" && value!="SP" && value!="SE" && value!="TO") throw (std::invalid_argument("Argument inst a valid state"));
+    if (value=="AC" || value=="AL" || value=="AP" || value=="AM" || value=="BA" || value=="CE" || value=="DF" ||
+        value=="ES" || value=="GO" || value=="MA" || value=="MT" || value=="MS" || value=="MG" || value=="PA" || value=="PB" ||
+        value=="PR" || value=="PE" || value=="PI" || value=="RJ" || value=="RN" || value=="RS" || value=="RO" || value=="RR" ||
+        value=="SC" || value=="SP" || value=="SE" || value=="TO"){}
+        else{throw (std::invalid_argument("Argument inst a valid state"));}
 }
 
 // Email
 void Email::validate(std::string value) throw (std::invalid_argument){
-    int tamanho_nome = 0;
-    int tamanho_dominio = 0;
     int check_arroba = 0;
+    // Verify if every character is @, dot or letter
+    for(int i=0; i<value.size(); i++)
+        if( !(value[i] == '@' || value[i] == '.' || (value[i]>='a' && value[i]<='z') || (value[i]>='A' && value[i]<='Z')) )
+            throw (std::invalid_argument("Argument must use only @, dots or letters"));
 
-    if (tamanho_nome > 10 || tamanho_dominio > 10)throw (std::invalid_argument("Argument must have less than 11 chars"));
+    // Count the number of @ and verify if it's ok
+    for(int i = 0; i < value.size(); i++) if(value[i] == '@') check_arroba++;
+    if(check_arroba!=1) throw (std::invalid_argument("Invalid email"));
 
-    for (int i=0; i < value.length(); i++){
-        if(value[i] == '@')
-            check_arroba++;
-
-        if(check_arroba > 1) throw (std::invalid_argument("cant have more than 1 @"));
-
-        if(value[i] == '@'){
-            tamanho_nome = i+1;
-            tamanho_dominio = value.length()-i+1;
+    // Verify the dots positions
+    for(int i=0; i<value.size(); i++){
+        if(value[i]=='.'){
+            // "Local" started with a dot
+            if(i==0) throw (std::invalid_argument("Argument must not start with a dot"));
+            // "Local" ended with a dot
+            else if(value[i+1]=='@') throw (std::invalid_argument("Argument \'local\' must not end with a dot"));
+            // "Dominio" started with a dot
+            else if(value[i-1]=='@') throw (std::invalid_argument("Argument \'dominio\' must not start with a dot"));
+            // Dots in sequence
+            else if(i<value.size()-1 && value[i+1]=='.') throw (std::invalid_argument("Argument must not have dots in sequence"));
         }
-        if((value[i] >= 64 && value[i] <= 90) || (value[i] >= 97 && value[i] <= 122 )||
-           value[i] == 46){}
-            else {throw (std::invalid_argument("Argument must be letters or comas"));}
-        if(value[i] == 46 && value[i+1] == 46)
-            throw (std::invalid_argument("cant have two comas together"));
     }
 
-    if(check_arroba == 0) throw (std::invalid_argument("need at least one @ in the name"));
+    // Find the position of the @ and verify the sizes of "Local" and "Dominio"
+    // Once we know that the number of @ here is 1, we do not need to verify it again.
+    int posat = value.find('@');
+    if(posat>20 || value.size() - posat > 20)
+        throw (std::invalid_argument("Argument \'dominio\' and \'local\' must not be larger than 20 letters"));
 }
 
 // Nome
@@ -331,7 +337,13 @@ void NumDeConta::validate(std::string value) throw (std::invalid_argument){
 // Preco
 void Preco::validate(std::string value) throw (std::invalid_argument){
     double valor = ::atof(value.c_str());
+    int tamanho_string = 0;
     if (valor < 0 || valor > 5000) throw (std::invalid_argument("Argument must be bigger than 0,00 and smaller than 5000,01"));
+    for (tamanho_string = 0;tamanho_string < value.size();tamanho_string++){
+        if((value[tamanho_string] >= '0' && value[tamanho_string] <= '9') || value[tamanho_string] == '.'){
+           }
+        else {throw (std::invalid_argument("Argument must be numbers or coma"));}
+    }
 }
 
 // Telefone
@@ -361,27 +373,28 @@ void Senha::validate(std::string value) throw (std::invalid_argument){
     int check_repetidas = 0;
     int check_letter = 0;
     int check_num = 0;
-    if (value.length()>5)throw (std::invalid_argument("Argument must have less than 6 chars"));
-    for (tamanho_string = 0;tamanho_string < value.length();tamanho_string++){
+    if (value.size() > 5){ throw (std::invalid_argument("Argument must have less than 6 chars"));}
+    for (tamanho_string = 0;tamanho_string < value.size();tamanho_string++){
         if((value[tamanho_string] >= 65 && value[tamanho_string] <= 90) || (value[tamanho_string] >= 97 && value[tamanho_string] <= 122 )||
            (value[tamanho_string] >= 48 && value[tamanho_string] <= 57) || (value[tamanho_string] >= 35 && value[tamanho_string] <= 38)){
            }
         else {throw (std::invalid_argument("Argument must be letters,numbers,%,$,# or &"));}
 
-        if((value[tamanho_string] > 65 && value[tamanho_string] < 90) || (value[tamanho_string] > 97 && value[tamanho_string] < 122))
-            check_letter++;
-        if(check_letter == 0)throw (std::invalid_argument("need at least one letter in the password"));
+        if((value[tamanho_string] >= 65 && value[tamanho_string] <= 90) || (value[tamanho_string] >= 97 && value[tamanho_string] <= 122 ))
+            {check_letter+=1;}
+
 
         if((value[tamanho_string] >= 48 && value[tamanho_string] <= 57))
-            check_num++;
-        if(check_num == 0)throw (std::invalid_argument("need at least one number in the password"));
+           {check_num+=1;}
+
 
         for(check_repetidas = tamanho_string+1; check_repetidas < value.length();check_repetidas++){
             if(value[tamanho_string] == value[check_repetidas])
                 throw (std::invalid_argument("cant have two equal chars in the password"));
         }
-
     }
+    if(check_num == 0)throw (std::invalid_argument("need at least one number in the password"));
+    if(check_letter == 0)throw (std::invalid_argument("need at least one letter in the password"));
 }
 
 // Vagas
