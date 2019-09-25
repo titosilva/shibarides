@@ -34,6 +34,9 @@ int main(){
     runTest<TUCodDeCarona>("CodDeCarona");
     runTest<TUCodDeReserva>("CodDeReserva");
     runTest<TUTelefone>("Telefone");
+    runTest<TUNumDeAgencia>("NumDeAgencia");
+    runTest<TUNumDeConta>("NumDeConta");
+    runTest<TUCPF>("CPF");
 
     return 0;
 }

@@ -11,9 +11,9 @@ class Dominio{
 public:
     Dominio();
     void setValue(std::string) throw (std::invalid_argument);
-    std::string getValue() const throw (std::exception);
+    std::string getValue() const;
 private:
-    virtual void validate(std::string) throw (std::invalid_argument);
+    virtual void validate(std::string) throw (std::invalid_argument)=0;
     std::string value;
     bool valueSet;
 };
@@ -40,6 +40,21 @@ private:
 };
 
 class CodDeReserva : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class CPF : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class NumDeAgencia : public Dominio{
+private:
+    void validate(std::string) throw (std::invalid_argument);
+};
+
+class NumDeConta : public Dominio{
 private:
     void validate(std::string) throw (std::invalid_argument);
 };

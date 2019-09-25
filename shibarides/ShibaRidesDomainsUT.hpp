@@ -10,7 +10,6 @@ namespace shibarides{
 
 class TUDominio{
 public:
-    TUDominio();
     const static int SUCCESS = 1, FAIL = 0;
     int run();
 protected:
@@ -21,10 +20,10 @@ protected:
     std::vector<std::string> successValues;
 private:
 
-    virtual void genFailValues();
-    virtual void genSuccessValues();
+    virtual void genFailValues()=0;
+    virtual void genSuccessValues()=0;
 
-    virtual void createDomain();
+    virtual void createDomain()=0;
     void successCase();
     void failCase();
     void destroyDomain();

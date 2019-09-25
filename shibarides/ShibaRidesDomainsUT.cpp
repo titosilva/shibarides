@@ -1,8 +1,5 @@
 #include "ShibaRidesDomainsUT.hpp"
-#include <iostream>
 using namespace shibarides;
-
-TUDominio::TUDominio(){};
 
 int TUDominio::run(){
     this->createDomain();
@@ -12,13 +9,8 @@ int TUDominio::run(){
     return this->state;
 }
 
-void TUDominio::genFailValues(){};
-void TUDominio::genSuccessValues(){};
-
-void TUDominio::createDomain(){};
-
 void TUDominio::successCase(){
-    for(int i=0; i<this->successValues.size(); i++){
+    for(unsigned int i=0; i<this->successValues.size(); i++){
         std::string val = this->successValues.at(i);
         try{
             this->domain->setValue(val);
@@ -30,7 +22,7 @@ void TUDominio::successCase(){
 }
 
 void TUDominio::failCase(){
-    for(int i=0; i<this->failValues.size(); i++){
+    for(unsigned int i=0; i<this->failValues.size(); i++){
         std::string val = this->failValues.at(i);
         try{
             this->domain->setValue(val);
@@ -191,6 +183,97 @@ void TUCodDeReserva::genSuccessValues(){
     this->successValues.push_back("45678");
     this->successValues.push_back("78901");
     this->successValues.push_back("15674");
+}
+
+// CPF
+TUCPF::TUCPF(){
+    this->successValues.clear();
+    this->failValues.clear();
+    this->genSuccessValues();
+    this->genFailValues();
+}
+
+void TUCPF::createDomain(){
+    this->domain = new CPF();
+    this->state = TUDominio::SUCCESS;
+}
+
+void TUCPF::genFailValues(){
+    this->failValues.push_back("abcde");
+    this->failValues.push_back("_-*#%$");
+    this->failValues.push_back("07214390124");
+    this->failValues.push_back("072a143b901-24");
+    this->failValues.push_back("072.143.901-25");
+    this->failValues.push_back("072.143.901-14");
+    this->failValues.push_back("253.741.146-39");
+    this->failValues.push_back("0235");
+    this->failValues.push_back("");
+}
+
+void TUCPF::genSuccessValues(){
+    this->successValues.push_back("072.143.901-24");
+    this->successValues.push_back("111.444.777-35");
+    this->successValues.push_back("253.741.146-38");
+}
+
+// NumDeAgencia
+TUNumDeAgencia::TUNumDeAgencia(){
+    this->successValues.clear();
+    this->failValues.clear();
+    this->genSuccessValues();
+    this->genFailValues();
+}
+
+void TUNumDeAgencia::createDomain(){
+    this->domain = new NumDeAgencia();
+    this->state = TUDominio::SUCCESS;
+}
+
+void TUNumDeAgencia::genFailValues(){
+    this->failValues.push_back("abc");
+    this->failValues.push_back("12344");
+    this->failValues.push_back("99994");
+    this->failValues.push_back("1234-5");
+    this->failValues.push_back("1234-9");
+    this->failValues.push_back("9999-0");
+    this->failValues.push_back("00000");
+}
+
+void TUNumDeAgencia::genSuccessValues(){
+    this->successValues.push_back("9999-4");
+    this->successValues.push_back("1234-4");
+    this->successValues.push_back("0000-0");
+    this->successValues.push_back("5643-2");
+}
+
+// NumDeConta
+TUNumDeConta::TUNumDeConta(){
+    this->successValues.clear();
+    this->failValues.clear();
+    this->genSuccessValues();
+    this->genFailValues();
+}
+
+void TUNumDeConta::createDomain(){
+    this->domain = new NumDeConta();
+    this->state = TUDominio::SUCCESS;
+}
+
+void TUNumDeConta::genFailValues(){
+    this->failValues.push_back("abc");
+    this->failValues.push_back("12344");
+    this->failValues.push_back("99994");
+    this->failValues.push_back("56435-2");
+    this->failValues.push_back("123456-7");
+    this->failValues.push_back("999999-0");
+    this->failValues.push_back("00000");
+}
+
+void TUNumDeConta::genSuccessValues(){
+    this->successValues.push_back("999999-6");
+    this->successValues.push_back("123456-6");
+    this->successValues.push_back("000000-0");
+    this->successValues.push_back("564352-3");
 }
 
 // Telefone
