@@ -1,0 +1,43 @@
+digraph "shibarides::Dominio"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shibarides::Dominio",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shibarides::Assento",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Assento.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shibarides::Bagagem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Bagagem.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shibarides::Cidade",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Cidade.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shibarides::CodDeBanco",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1CodDeBanco.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="shibarides::CodDeCarona",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1CodDeCarona.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="shibarides::CodDeReserva",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1CodDeReserva.html"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="shibarides::CPF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1CPF.html"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="shibarides::Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Data.html"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="shibarides::Duracao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Duracao.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="shibarides::Email",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Email.html"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="shibarides::Estado",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Estado.html"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="shibarides::Nome",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Nome.html"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="shibarides::NumDeAgencia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1NumDeAgencia.html"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="shibarides::NumDeConta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1NumDeConta.html"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="shibarides::Preco",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Preco.html"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="shibarides::Senha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Senha.html"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="shibarides::Telefone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Telefone.html"];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="shibarides::Vagas",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classshibarides_1_1Vagas.html"];
+}

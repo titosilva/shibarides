@@ -1,0 +1,17 @@
+\hypertarget{classshibarides_1_1Assento}{}\section{Referência da Classe shibarides\+:\+:Assento}
+\label{classshibarides_1_1Assento}\index{shibarides\+::\+Assento@{shibarides\+::\+Assento}}
+
+
+Diagrama de Hierarquia para shibarides\+:\+:Assento\+:
+% FIG 0
+
+
+Diagrama de colaboração para shibarides\+:\+:Assento\+:
+% FIG 1
+\subsection*{Outros membros herdados}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+shibarides/Shiba\+Rides\+Domains.\+hpp\item 
+shibarides/Shiba\+Rides\+Domains.\+cpp\end{DoxyCompactItemize}
