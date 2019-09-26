@@ -1,5 +1,9 @@
 #ifndef SHIBARIDESENTITIES_HPP_INCLUDED
 #define SHIBARIDESENTITIES_HPP_INCLUDED
+#include "ShibaRidesDomains.hpp"
+
+
+namespace shibarides{
 
 class Usuario{
 public:
@@ -7,7 +11,7 @@ public:
     void setNome(const Nome &nome){
         this->nome = nome;
     }
-    string getNome() const{
+    Nome getNome() const{
         return this->nome;
     }
 
@@ -15,7 +19,7 @@ public:
     void setTelefone(const Telefone &telefone){
         this->telefone = telefone;
     }
-    string getTelefone() const{
+    Telefone getTelefone() const{
         return this->telefone;
     }
 
@@ -23,7 +27,7 @@ public:
     void setEmail(const Email &email){
         this->email = email;
     }
-    string getEmail() const{
+    Email getEmail() const{
         return this->email;
     }
 
@@ -31,7 +35,7 @@ public:
     void setSenha(const Senha &senha){
         this->senha = senha;
     }
-    string getSenha() const{
+    Senha getSenha() const{
         return this->senha;
     }
 
@@ -39,7 +43,7 @@ public:
     void setCPF(const CPF &cpf){
         this->cpf = cpf;
     }
-    string getCPF() const{
+    CPF getCPF() const{
         return this->cpf;
     }
 
@@ -57,7 +61,7 @@ public:
     void setCodigo(const CodDeReserva &codigo){
         this->codigo = codigo;
     }
-    string getCodigo() const{
+    CodDeReserva getCodigo() const{
         return this->codigo;
     }
 
@@ -65,7 +69,7 @@ public:
     void setAssento(const Assento &assento){
         this->assento = assento;
     }
-    string getAssento() const{
+    Assento getAssento() const{
         return this->assento;
     }
 
@@ -73,7 +77,7 @@ public:
     void setBagagem(const Bagagem &bagagem){
         this->bagagem = bagagem;
     }
-    string getBagagem() const{
+    Bagagem getBagagem() const{
         return this->bagagem;
     }
 private:
@@ -88,7 +92,7 @@ public:
     void setCodigo(const CodDeCarona &codigo){
         this->codigo = codigo;
     }
-    string getCodigo() const{
+    CodDeCarona getCodigo() const{
         return this->codigo;
     }
 
@@ -96,7 +100,7 @@ public:
     void setCidadeOrigem(const Cidade &cidorigem){
         this->cidorigem = cidorigem;
     }
-    string getCidadeOrigem() const{
+    Cidade getCidadeOrigem() const{
         return this->cidorigem;
     }
 
@@ -104,7 +108,7 @@ public:
     void setEstadoOrigem(const Estado &estorigem){
         this->estorigem = estorigem;
     }
-    string getEstadoOrigem() const{
+    Estado getEstadoOrigem() const{
         return this->estorigem;
     }
 
@@ -112,7 +116,7 @@ public:
     void setCidadeDestino(const Cidade &ciddestino){
         this->ciddestino = ciddestino;
     }
-    string getCidadeDestino() const{
+    Cidade getCidadeDestino() const{
         return this->ciddestino;
     }
 
@@ -120,7 +124,7 @@ public:
     void setEstadoDestino(const Estado &estdestino){
         this->estdestino = estdestino;
     }
-    string getEstadoDestino() const{
+    Estado getEstadoDestino() const{
         return this->estdestino;
     }
 
@@ -128,7 +132,7 @@ public:
     void setData(const Data &data){
         this->data = data;
     }
-    string getData() const{
+    Data getData() const{
         return this->data;
     }
 
@@ -136,7 +140,7 @@ public:
     void setDuracao(const Duracao &duracao){
         this->duracao = duracao;
     }
-    string getDuracao() const{
+    Duracao getDuracao() const{
         return this->duracao;
     }
 
@@ -144,7 +148,7 @@ public:
     void setVagas(const Vagas &vagas){
         this->vagas = vagas;
     }
-    string getVagas() const{
+    Vagas getVagas() const{
         return this->vagas;
     }
 
@@ -152,7 +156,7 @@ public:
     void setPreco(const Preco &preco){
         this->preco = preco;
     }
-    string getPreco() const{
+    Preco getPreco() const{
         return this->preco;
     }
 private:
@@ -165,7 +169,7 @@ private:
     Duracao duracao;
     Vagas vagas;
     Preco preco;
-}
+};
 
 class Conta{
 public:
@@ -173,7 +177,7 @@ public:
     void setBanco(const CodDeBanco &banco){
         this->banco = banco;
     }
-    string getBanco() const{
+    CodDeBanco getBanco() const{
         return this->banco;
     }
 
@@ -181,7 +185,7 @@ public:
     void setAgencia(const NumDeAgencia &agencia){
         this->agencia = agencia;
     }
-    string getAgencia() const{
+    NumDeAgencia getAgencia() const{
         return this->agencia;
     }
 
@@ -189,7 +193,7 @@ public:
     void setConta(const NumDeConta &conta){
         this->conta = conta;
     }
-    string getConta() const{
+    NumDeConta getConta() const{
         return this->conta;
     }
 private:
@@ -197,5 +201,7 @@ private:
     NumDeAgencia agencia;
     NumDeConta conta;
 };
+
+}
 
 #endif // SHIBARIDESENTITIES_HPP_INCLUDED

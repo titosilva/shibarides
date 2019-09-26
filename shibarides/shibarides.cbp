@@ -36,6 +36,8 @@
 		<Unit filename="ShibaRidesDomains.hpp" />
 		<Unit filename="ShibaRidesDomainsUT.cpp" />
 		<Unit filename="ShibaRidesDomainsUT.hpp" />
+		<Unit filename="ShibaRidesEntities.cpp" />
+		<Unit filename="ShibaRidesEntities.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
