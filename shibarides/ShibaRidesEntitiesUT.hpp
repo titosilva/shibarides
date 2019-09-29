@@ -15,36 +15,36 @@ public:
 protected:
     int state;
 private:
-    virtual void createUsuario()=0;
+    virtual void createEntity()=0;
     virtual void testMethods()=0;
-    virtual void destroyUsuario()=0;
+    virtual void destroyEntity()=0;
 };
 
 class TUUsuario : public TUEntidade{
 private:
     Usuario *usuario;
 private:
-    void createUsuario();
+    void createEntity();
     void testMethods();
-    void destroyUsuario();
+    void destroyEntity();
 };
 
 class TUConta : public TUEntidade{
 private:
     Conta *conta;
 private:
-    void createConta();
+    void createEntity();
     void testMethods();
-    void destroyConta();
+    void destroyEntity();
 };
 
 class TUReserva : public TUEntidade{
 private:
     Reserva *reserva;
 private:
-    void createReserva();
+    void createEntity();
     void testMethods();
-    void destroyReserva();
+    void destroyEntity();
 };
 
 };

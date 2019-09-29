@@ -8,14 +8,14 @@ TUEntidade::TUEntidade(){
 }
 
 int TUEntidade::run(){
-    this->createUsuario();
+    this->createEntity();
     this->testMethods();
-    this->destroyUsuario();
+    this->destroyEntity();
     return this->state;
 }
 
 // Usuario
-void TUUsuario::createUsuario(){
+void TUUsuario::createEntity(){
     this->usuario = new Usuario();
 }
 
@@ -37,6 +37,6 @@ void TUUsuario::testMethods(){
     }
 }
 
-void TUUsuario::destroyUsuario(){
+void TUUsuario::destroyEntity(){
     delete this->usuario;
 }
