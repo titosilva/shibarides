@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reserva',['Reserva',['../classshibarides_1_1Reserva.html',1,'shibarides']]]
+  ['preco',['Preco',['../classshibarides_1_1Preco.html',1,'shibarides']]]
 ];

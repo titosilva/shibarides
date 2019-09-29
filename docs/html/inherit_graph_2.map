@@ -1,5 +1,5 @@
 <map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
-<area shape="rect" id="node1" href="$classshibarides_1_1Dominio.html" title="shibarides::Dominio" alt="" coords="5,436,143,463"/>
+<area shape="rect" id="node1" href="$classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="5,436,143,463"/>
 <area shape="rect" id="node2" href="$classshibarides_1_1Assento.html" title="shibarides::Assento" alt="" coords="213,5,350,32"/>
 <area shape="rect" id="node3" href="$classshibarides_1_1Bagagem.html" title="shibarides::Bagagem" alt="" coords="209,56,353,83"/>
 <area shape="rect" id="node4" href="$classshibarides_1_1Cidade.html" title="shibarides::Cidade" alt="" coords="216,107,347,133"/>

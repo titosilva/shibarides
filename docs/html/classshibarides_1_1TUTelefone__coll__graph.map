@@ -1,4 +1,4 @@
 <map id="shibarides::TUTelefone" name="shibarides::TUTelefone">
 <area shape="rect" id="node2" href="$classshibarides_1_1TUDominio.html" title="shibarides::TUDominio" alt="" coords="7,95,161,121"/>
-<area shape="rect" id="node3" href="$classshibarides_1_1Dominio.html" title="shibarides::Dominio" alt="" coords="15,5,153,32"/>
+<area shape="rect" id="node3" href="$classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="15,5,153,32"/>
 </map>

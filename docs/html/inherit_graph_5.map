@@ -1,3 +1,6 @@
 <map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
-<area shape="rect" id="node1" href="$classshibarides_1_1Usuario.html" title="shibarides::Usuario" alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node1" href="$classshibarides_1_1TUEntidade.html" title="shibarides::TUEntidade" alt="" coords="5,56,164,83"/>
+<area shape="rect" id="node2" href="$classshibarides_1_1TUConta.html" title="shibarides::TUConta" alt="" coords="219,5,361,32"/>
+<area shape="rect" id="node3" href="$classshibarides_1_1TUReserva.html" title="shibarides::TUReserva" alt="" coords="212,56,368,83"/>
+<area shape="rect" id="node4" href="$classshibarides_1_1TUUsuario.html" title="shibarides::TUUsuario" alt="" coords="214,107,366,133"/>
 </map>

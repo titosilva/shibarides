@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Dominio}\index{shibarides\+::\+Dominio@{shibarides\+::\+Dominio}}
 
 
+Classe abstrata que serve de base para os domínios.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Dominio\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -12,12 +21,101 @@ Diagrama de Hierarquia para shibarides\+:\+:Dominio\+:\nopagebreak
 \subsection*{Métodos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries set\+Value} (std\+::string)  throw (std\+::invalid\+\_\+argument)\hypertarget{classshibarides_1_1Dominio_a459a792e3f90b5b83880d3277c15747c}{}\label{classshibarides_1_1Dominio_a459a792e3f90b5b83880d3277c15747c}
-
+\hyperlink{classshibarides_1_1Dominio_ab421ab3e3bcca7f47fe5320e0957b9a9}{Dominio} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \hyperlink{classshibarides_1_1Dominio}{Dominio}. \end{DoxyCompactList}\item 
+void \hyperlink{classshibarides_1_1Dominio_a459a792e3f90b5b83880d3277c15747c}{set\+Value} (std\+::string)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em Armazena o valor passado, caso este seja valido para o dominio em questão. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classshibarides_1_1Dominio_aa6fca113add7ee85dee788f4325fe564}{get\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o valor armazenado no campo value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Privados}
+\begin{DoxyCompactItemize}
 \item 
-std\+::string {\bfseries get\+Value} () const \hypertarget{classshibarides_1_1Dominio_aa6fca113add7ee85dee788f4325fe564}{}\label{classshibarides_1_1Dominio_aa6fca113add7ee85dee788f4325fe564}
+virtual void \hyperlink{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{validate} (std\+::string)=0  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classshibarides_1_1Dominio_a840b839896c84528573c299496033dcc}{value}\hypertarget{classshibarides_1_1Dominio_a840b839896c84528573c299496033dcc}{}\label{classshibarides_1_1Dominio_a840b839896c84528573c299496033dcc}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Armazena valores (todos os valores sao strings) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe abstrata que serve de base para os domínios. 
+
+Classe da qual todos os dominios são herdados. Implementa as funçoes set\+Value e get\+Value, que servem para definir o valor armazenado em um dominio ou retornar esse valor. Todos os valores para os dominios sao armazenados na string value. É exigida a implementação da função abstrata pura validate em todos os dominios. Essa função define as regras pelas quais valores serao aceitos ou recusados pelo dominio. 
+
+\subsection{Construtores \& Destrutores}
+\index{shibarides\+::\+Dominio@{shibarides\+::\+Dominio}!Dominio@{Dominio}}
+\index{Dominio@{Dominio}!shibarides\+::\+Dominio@{shibarides\+::\+Dominio}}
+\subsubsection[{\texorpdfstring{Dominio()}{Dominio()}}]{\setlength{\rightskip}{0pt plus 5cm}Dominio\+::\+Dominio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classshibarides_1_1Dominio_ab421ab3e3bcca7f47fe5320e0957b9a9}{}\label{classshibarides_1_1Dominio_ab421ab3e3bcca7f47fe5320e0957b9a9}
+
+
+Construtor da classe \hyperlink{classshibarides_1_1Dominio}{Dominio}. 
+
+Apenas define o campo value como string vazia (\char`\"{}\char`\"{}) 
+
+\subsection{Métodos}
+\index{shibarides\+::\+Dominio@{shibarides\+::\+Dominio}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!shibarides\+::\+Dominio@{shibarides\+::\+Dominio}}
+\subsubsection[{\texorpdfstring{get\+Value() const }{getValue() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Dominio\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classshibarides_1_1Dominio_aa6fca113add7ee85dee788f4325fe564}{}\label{classshibarides_1_1Dominio_aa6fca113add7ee85dee788f4325fe564}
+
+
+Retorna o valor armazenado no campo value. 
+
+A funçao get\+Value retorna o valor armazenado pelo dominio. Se o valor ainda nao tiver sido modificado, é retornada uma string vazia.
+
+\begin{DoxyReturn}{Retorna}
+string Valor armazenado pelo dominio 
+\end{DoxyReturn}
+\index{shibarides\+::\+Dominio@{shibarides\+::\+Dominio}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!shibarides\+::\+Dominio@{shibarides\+::\+Dominio}}
+\subsubsection[{\texorpdfstring{set\+Value(std\+::string)}{setValue(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Dominio\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{value}
+\end{DoxyParamCaption}
+) throw  std\+::invalid\+\_\+argument) }\hypertarget{classshibarides_1_1Dominio_a459a792e3f90b5b83880d3277c15747c}{}\label{classshibarides_1_1Dominio_a459a792e3f90b5b83880d3277c15747c}
+
+
+Armazena o valor passado, caso este seja valido para o dominio em questão. 
+
+A funçao set\+Value invoca o metodo validate do dominio, com o intuito de verificar se o valor passado é valido. Em caso positivo, o valor é armazenado no campo value do objeto. Em caso negativo, é lançada uma excessão do tipo std\+::invalid\+\_\+argument.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & Valor a ser armazenado \\
+\hline
+\end{DoxyParams}
+\index{shibarides\+::\+Dominio@{shibarides\+::\+Dominio}!validate@{validate}}
+\index{validate@{validate}!shibarides\+::\+Dominio@{shibarides\+::\+Dominio}}
+\subsubsection[{\texorpdfstring{validate(std\+::string)=0}{validate(std::string)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void shibarides\+::\+Dominio\+::validate (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}\hypertarget{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{}\label{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}
+
+
+Função privada que define as regras de validação para o dominio. 
+
+Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em string} & Valor a ser validado. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \hyperlink{classshibarides_1_1Vagas_ae5f73c52819397524b0334d9e609d296}{shibarides\+::\+Vagas}, \hyperlink{classshibarides_1_1Senha_a733550b46c79a95df9f5f4163f0be923}{shibarides\+::\+Senha}, \hyperlink{classshibarides_1_1Telefone_aa798f740a30faef8d2599950284ded33}{shibarides\+::\+Telefone}, \hyperlink{classshibarides_1_1Preco_ae57d286adf4db4b1132001f8736892f7}{shibarides\+::\+Preco}, \hyperlink{classshibarides_1_1NumDeConta_afe1c1bfd98ca97d59b521a6e7ac9d5ef}{shibarides\+::\+Num\+De\+Conta}, \hyperlink{classshibarides_1_1NumDeAgencia_a4bf7dd9204aff60838faf4f2362d8c3b}{shibarides\+::\+Num\+De\+Agencia}, \hyperlink{classshibarides_1_1Nome_aae6c1656422424a675e79a03a7ca534e}{shibarides\+::\+Nome}, \hyperlink{classshibarides_1_1Email_a0589d5dedd6e072f454391cd2e2873ee}{shibarides\+::\+Email}, \hyperlink{classshibarides_1_1Estado_a87dff745c1b1f487eae4bd4461e8a1ef}{shibarides\+::\+Estado}, \hyperlink{classshibarides_1_1Duracao_aa64196edbfe284120c3d498e20212a99}{shibarides\+::\+Duracao}, \hyperlink{classshibarides_1_1Data_a6240717eb60d01a7ab0c12336685c862}{shibarides\+::\+Data}, \hyperlink{classshibarides_1_1CPF_a0764894456e73dde8130a07f95b68f08}{shibarides\+::\+C\+PF}, \hyperlink{classshibarides_1_1Cidade_a2a2455d16a0d316ebcc57c4389e1a0b0}{shibarides\+::\+Cidade}, \hyperlink{classshibarides_1_1CodDeReserva_a595a667ca295b1adc5eedefd773d8027}{shibarides\+::\+Cod\+De\+Reserva}, \hyperlink{classshibarides_1_1CodDeCarona_a2713cdc938576b30a6f7e59ddc67a848}{shibarides\+::\+Cod\+De\+Carona}, \hyperlink{classshibarides_1_1CodDeBanco_a111bd50227f559d36010ddbf7bee1107}{shibarides\+::\+Cod\+De\+Banco}, \hyperlink{classshibarides_1_1Bagagem_aad85c0b035f3f3202130160edc35d41d}{shibarides\+::\+Bagagem} e \hyperlink{classshibarides_1_1Assento_a8a2099562808c49caff59569bcb977c3}{shibarides\+::\+Assento}.
+
 
 
 A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

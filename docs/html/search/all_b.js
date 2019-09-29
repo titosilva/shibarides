@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vagas',['Vagas',['../classshibarides_1_1Vagas.html',1,'shibarides']]]
+  ['usuario',['Usuario',['../classshibarides_1_1Usuario.html',1,'shibarides']]]
 ];

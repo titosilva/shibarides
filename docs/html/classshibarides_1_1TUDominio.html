@@ -64,6 +64,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       <li><a href="annotated.html"><span>Lista&#160;de&#160;Componentes</span></a></li>
       <li><a href="classes.html"><span>Índice&#160;dos&#160;Componentes</span></a></li>
       <li><a href="inherits.html"><span>Hierarquia&#160;de&#160;Classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&#160;Membros</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -90,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <a href="#pub-methods">Métodos Públicos</a> &#124;
 <a href="#pub-static-attribs">Atributos Estáticos Públicos</a> &#124;
 <a href="#pro-attribs">Atributos Protegidos</a> &#124;
+<a href="#pri-methods">Métodos Privados</a> &#124;
 <a href="classshibarides_1_1TUDominio-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência da Classe shibarides::TUDominio<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -125,7 +127,7 @@ Diagrama de colaboração para shibarides::TUDominio:</div>
 <div class="dyncontent">
 <div class="center"><img src="classshibarides_1_1TUDominio__coll__graph.png" border="0" usemap="#shibarides_1_1TUDominio_coll__map" alt="Collaboration graph"/></div>
 <map name="shibarides_1_1TUDominio_coll__map" id="shibarides_1_1TUDominio_coll__map">
-<area shape="rect" id="node2" href="classshibarides_1_1Dominio.html" title="shibarides::Dominio" alt="" coords="14,5,151,32"/>
+<area shape="rect" id="node2" href="classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="14,5,151,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
@@ -158,6 +160,27 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="memitem:a93df3635be9b1cd0726f5f1427a7b414"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93df3635be9b1cd0726f5f1427a7b414"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>successValues</b></td></tr>
 <tr class="separator:a93df3635be9b1cd0726f5f1427a7b414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos Privados</h2></td></tr>
+<tr class="memitem:aacb5fcdd84fa980f887769daab4565bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacb5fcdd84fa980f887769daab4565bc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>genFailValues</b> ()=0</td></tr>
+<tr class="separator:aacb5fcdd84fa980f887769daab4565bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feb01f87ed74028d29ef2299d4888d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1feb01f87ed74028d29ef2299d4888d9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>genSuccessValues</b> ()=0</td></tr>
+<tr class="separator:a1feb01f87ed74028d29ef2299d4888d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0be8e7153952da7f3abb099fdc404f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0be8e7153952da7f3abb099fdc404f7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>createDomain</b> ()=0</td></tr>
+<tr class="separator:af0be8e7153952da7f3abb099fdc404f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4afb45fca447ea713c718fa36d4f5a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4afb45fca447ea713c718fa36d4f5a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>successCase</b> ()</td></tr>
+<tr class="separator:ad4afb45fca447ea713c718fa36d4f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a441b2075e00ebf26aa644a76ec793f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a441b2075e00ebf26aa644a76ec793f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>failCase</b> ()</td></tr>
+<tr class="separator:a6a441b2075e00ebf26aa644a76ec793f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8e0db37850502e9461d252a91d8331"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a8e0db37850502e9461d252a91d8331"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>destroyDomain</b> ()</td></tr>
+<tr class="separator:a1a8e0db37850502e9461d252a91d8331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes arquivos:<ul>
 <li>shibarides/<a class="el" href="ShibaRidesDomainsUT_8hpp_source.html">ShibaRidesDomainsUT.hpp</a></li>
