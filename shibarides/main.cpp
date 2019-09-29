@@ -1,6 +1,8 @@
 #include <iostream>
 #include "ShibaRidesDomains.hpp"
 #include "ShibaRidesDomainsUT.hpp"
+#include "ShibaRidesEntities.hpp"
+#include "ShibaRidesEntitiesUT.hpp"
 
 using namespace std;
 using namespace shibarides;
@@ -19,6 +21,26 @@ void runTest(string label){
         cout << "SUCCESS" << endl;
         break;
     case TUDominio::FAIL:
+        cout << "FAIL" << endl;
+        break;
+    default:
+        cout << "UNDEFINED" << endl;
+    }
+
+}
+
+void runTestUsuario(string label){
+    TUUsuario tu;
+    cout << "Testing: "<< label << endl;
+    cout << "> Result: ";
+
+    int r = tu.run();
+    printf("testte");
+    switch(r){
+    case TUUsuario::SUCCESS:
+        cout << "SUCCESS" << endl;
+        break;
+    case TUUsuario::FAIL:
         cout << "FAIL" << endl;
         break;
     default:
@@ -46,6 +68,8 @@ int main(){
     runTest<TUTelefone>("Telefone");
     runTest<TUSenha>("Senha");
     runTest<TUVagas>("Vagas");
+    runTestUsuario("Usuario");
+
 
     return 0;
 }
