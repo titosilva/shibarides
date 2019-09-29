@@ -15,7 +15,6 @@ public:
 private:
     virtual void validate(std::string) throw (std::invalid_argument)=0;
     std::string value;
-    bool valueSet;
 };
 
 // Domains

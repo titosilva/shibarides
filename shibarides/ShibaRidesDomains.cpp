@@ -5,20 +5,16 @@ using namespace shibarides;
 
 // Base class
 Dominio::Dominio(){
-    this->valueSet = false;
     this->value = "";
 }
-
 
 void Dominio::setValue(std::string value) throw (std::invalid_argument){
     this->validate(value);
     this->value = value;
-    this->valueSet = true;
 }
 
 std::string Dominio::getValue() const{
-    if(this->valueSet) return this->value;
-    else return "";
+    return this->value;
 }
 
 // Domains

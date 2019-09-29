@@ -7,87 +7,44 @@
 
 namespace shibarides{
 
-class TUUsuario{
+class TUEntidade{
 public:
+    TUEntidade();
     const static int SUCCESS = 1, FAIL = 0;
     int run();
 protected:
-    Usuario *usuario;
     int state;
-
-    std::vector<std::string> failValues;
-    std::vector<std::string> successValues;
 private:
+    virtual void createUsuario()=0;
+    virtual void testMethods()=0;
+    virtual void destroyUsuario()=0;
+};
 
-    void genFailValues();
-    void genSuccessValues();
-
+class TUUsuario : public TUEntidade{
+private:
+    Usuario *usuario;
+private:
     void createUsuario();
-    void successCase();
-    void failCase();
+    void testMethods();
     void destroyUsuario();
 };
 
-class TUReserva{
-public:
-    const static int SUCCESS = 1, FAIL = 0;
-    int run();
-protected:
-    Reserva *reserva;
-    int state;
-
-    std::vector<std::string> failValues;
-    std::vector<std::string> successValues;
+class TUConta : public TUEntidade{
 private:
-    void genFailValues();
-    void genSuccessValues();
-
-    void createReserva();
-    void successCase();
-    void failCase();
-    void destroyReserva();
-};
-
-class TUCarona{
-public:
-    const static int SUCCESS = 1, FAIL = 0;
-    int run();
-protected:
-    Carona *carona;
-    int state;
-
-    std::vector<std::string> failValues;
-    std::vector<std::string> successValues;
-private:
-
-    void genFailValues();
-    void genSuccessValues();
-
-    void createCarona();
-    void successCase();
-    void failCase();
-    void destroyCarona();
-};
-
-class TUConta{
-public:
-    const static int SUCCESS = 1, FAIL = 0;
-    int run();
-protected:
     Conta *conta;
-    int state;
-
-    std::vector<std::string> failValues;
-    std::vector<std::string> successValues;
 private:
-
-    void genFailValues();
-    void genSuccessValues();
-
     void createConta();
-    void successCase();
-    void failCase();
+    void testMethods();
     void destroyConta();
+};
+
+class TUReserva : public TUEntidade{
+private:
+    Reserva *reserva;
+private:
+    void createReserva();
+    void testMethods();
+    void destroyReserva();
 };
 
 };

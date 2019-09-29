@@ -7,7 +7,7 @@
 	"ShibaRidesDomains.hpp"
 	"ShibaRidesDomainsUT.hpp"
 
-1569440624 sDomainsUT.hpp"
+1569444896 sDomainsUT.hpp"
 
 1569535781 source:/home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomains.cpp
 	"ShibaRidesDomains.hpp"
@@ -17,7 +17,7 @@
 	<iostream>
 	<vector>
 
-1569440684 
+1569719298 
 
 1569442394 /home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomains.hpp
 	<stdexcept>
@@ -41,6 +41,8 @@
 	"ShibaRidesDomainsUT.hpp"
 	"ShibaRidesEntities.hpp"
 	"ShibaRidesEntitiesUT.hpp"
+
+1569719955 sEntitiesUT.hpp"
 
 1569540153 c:\users\pedro fernandes\desktop\shibarides-master\shibarides\shibaridesdomains.hpp
 	<stdexcept>
@@ -83,6 +85,8 @@
 	"ShibaRidesEntities.hpp"
 	"ShibaRidesDomains.hpp"
 
+1569711488 sDomains.hpp"
+
 1569711488 c:\users\pedro fernandes\desktop\shibarides-master\shibarides\shibaridesentities.hpp
 	"ShibaRidesDomains.hpp"
 
@@ -93,4 +97,42 @@
 
 1569719955 source:c:\users\pedro fernandes\desktop\shibarides-master\shibarides\shibaridesentetiesut.cpp
 	"ShibaRidesEntitiesUT.hpp"
+
+1569757756 source:/home/titosilva/Documents/prog/shibarides/shibarides/main.cpp
+	<iostream>
+	"ShibaRidesDomains.hpp"
+	"ShibaRidesDomainsUT.hpp"
+	"ShibaRidesEntities.hpp"
+	"ShibaRidesEntitiesUT.hpp"
+
+1569757364 /home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomains.hpp
+	<stdexcept>
+	<string>
+
+1569442394 /home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomainsUT.hpp
+	"ShibaRidesDomains.hpp"
+	<vector>
+
+1569755182 /home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesEntities.hpp
+	"ShibaRidesDomains.hpp"
+
+1569757455 /home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesEntitiesUT.hpp
+	"ShibaRidesEntities.hpp"
+	"ShibaRidesDomains.hpp"
+	<vector>
+
+1569757431 source:/home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomains.cpp
+	"ShibaRidesDomains.hpp"
+	<iostream>
+	<vector>
+
+1569535781 source:/home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesDomainsUT.cpp
+	"ShibaRidesDomainsUT.hpp"
+
+1569757478 source:/home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesEntetiesUT.cpp
+	"ShibaRidesEntitiesUT.hpp"
+
+1569755182 source:/home/titosilva/Documents/prog/shibarides/shibarides/ShibaRidesEntities.cpp
+	"ShibaRidesEntities.hpp"
+	"ShibaRidesDomains.hpp"
 
