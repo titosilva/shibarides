@@ -2,6 +2,15 @@
 \label{classshibarides_1_1CodDeBanco}\index{shibarides\+::\+Cod\+De\+Banco@{shibarides\+::\+Cod\+De\+Banco}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelo código de banco, fornecido pelo usuaŕio.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Cod\+De\+Banco\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,27 +31,32 @@ Diagrama de colaboração para shibarides\+:\+:Cod\+De\+Banco\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1CodDeBanco_a111bd50227f559d36010ddbf7bee1107}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelo código de banco, fornecido pelo usuaŕio. 
+
+Representa o código de banco do usuario. Os valores aceitos são da forma X\+XX, onde X é dígito de 0 a 9. 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Cod\+De\+Banco@{shibarides\+::\+Cod\+De\+Banco}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Cod\+De\+Banco@{shibarides\+::\+Cod\+De\+Banco}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cod\+De\+Banco\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1CodDeBanco_a111bd50227f559d36010ddbf7bee1107}{}\label{classshibarides_1_1CodDeBanco_a111bd50227f559d36010ddbf7bee1107}
 
 
-Função privada que define as regras de validação para o dominio. 
+Metodo que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Os valores aceitos para este dominio são da forma X\+XX, onde X é dígito de 0 a 9.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
 

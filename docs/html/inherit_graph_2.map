@@ -1,16 +1,16 @@
 <map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
 <area shape="rect" id="node1" href="$classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="5,436,143,463"/>
-<area shape="rect" id="node2" href="$classshibarides_1_1Assento.html" title="shibarides::Assento" alt="" coords="213,5,350,32"/>
-<area shape="rect" id="node3" href="$classshibarides_1_1Bagagem.html" title="shibarides::Bagagem" alt="" coords="209,56,353,83"/>
-<area shape="rect" id="node4" href="$classshibarides_1_1Cidade.html" title="shibarides::Cidade" alt="" coords="216,107,347,133"/>
-<area shape="rect" id="node5" href="$classshibarides_1_1CodDeBanco.html" title="shibarides::CodDeBanco" alt="" coords="198,157,365,184"/>
-<area shape="rect" id="node6" href="$classshibarides_1_1CodDeCarona.html" title="shibarides::CodDeCarona" alt="" coords="195,208,367,235"/>
-<area shape="rect" id="node7" href="$classshibarides_1_1CodDeReserva.html" title="shibarides::CodDeReserva" alt="" coords="192,259,371,285"/>
-<area shape="rect" id="node8" href="$classshibarides_1_1CPF.html" title="shibarides::CPF" alt="" coords="223,309,339,336"/>
-<area shape="rect" id="node9" href="$classshibarides_1_1Data.html" title="shibarides::Data" alt="" coords="223,360,340,387"/>
-<area shape="rect" id="node10" href="$classshibarides_1_1Duracao.html" title="shibarides::Duracao" alt="" coords="212,411,351,437"/>
-<area shape="rect" id="node11" href="$classshibarides_1_1Email.html" title="shibarides::Email" alt="" coords="220,461,343,488"/>
-<area shape="rect" id="node12" href="$classshibarides_1_1Estado.html" title="shibarides::Estado" alt="" coords="216,512,347,539"/>
+<area shape="rect" id="node2" href="$classshibarides_1_1Assento.html" title="Dominio responsável pela preferência de assento do passageiro. " alt="" coords="213,5,350,32"/>
+<area shape="rect" id="node3" href="$classshibarides_1_1Bagagem.html" title="Dominio responsável pelo numero de volumes da bagagem do passageiro. " alt="" coords="209,56,353,83"/>
+<area shape="rect" id="node4" href="$classshibarides_1_1Cidade.html" title="Dominio responsável pelas cidades de origem e destino das caronas. " alt="" coords="216,107,347,133"/>
+<area shape="rect" id="node5" href="$classshibarides_1_1CodDeBanco.html" title="Dominio responsável pelo código de banco, fornecido pelo usuaŕio. " alt="" coords="198,157,365,184"/>
+<area shape="rect" id="node6" href="$classshibarides_1_1CodDeCarona.html" title="Dominio responsável pelo código da carona fornecida pelo usuaŕio. " alt="" coords="195,208,367,235"/>
+<area shape="rect" id="node7" href="$classshibarides_1_1CodDeReserva.html" title="Dominio responsável pelo código de reserva, fornecido pelo sistema. " alt="" coords="192,259,371,285"/>
+<area shape="rect" id="node8" href="$classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. " alt="" coords="223,309,339,336"/>
+<area shape="rect" id="node9" href="$classshibarides_1_1Data.html" title="Dominio responsável pelas datas. " alt="" coords="223,360,340,387"/>
+<area shape="rect" id="node10" href="$classshibarides_1_1Duracao.html" title="Dominio responsável pela duração das viagens. " alt="" coords="212,411,351,437"/>
+<area shape="rect" id="node11" href="$classshibarides_1_1Email.html" title="Dominio responsável pela validação dos endereços de Email. " alt="" coords="220,461,343,488"/>
+<area shape="rect" id="node12" href="$classshibarides_1_1Estado.html" title="Dominio responsável pelos estados de origem e destino das viagens. " alt="" coords="216,512,347,539"/>
 <area shape="rect" id="node13" href="$classshibarides_1_1Nome.html" title="shibarides::Nome" alt="" coords="219,563,343,589"/>
 <area shape="rect" id="node14" href="$classshibarides_1_1NumDeAgencia.html" title="shibarides::NumDeAgencia" alt="" coords="191,613,372,640"/>
 <area shape="rect" id="node15" href="$classshibarides_1_1NumDeConta.html" title="shibarides::NumDeConta" alt="" coords="197,664,366,691"/>

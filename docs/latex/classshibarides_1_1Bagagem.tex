@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Bagagem}\index{shibarides\+::\+Bagagem@{shibarides\+::\+Bagagem}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelo numero de volumes da bagagem do passageiro.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Bagagem\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,27 +31,32 @@ Diagrama de colaboração para shibarides\+:\+:Bagagem\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1Bagagem_aad85c0b035f3f3202130160edc35d41d}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelo numero de volumes da bagagem do passageiro. 
+
+Representa a quantidade de volumes na bagagem do passegeiro. O numero de volumes da bagagem pode ser qualquer valor de 0 a 4, que devem ser passados com string para o método set\+Value 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Bagagem@{shibarides\+::\+Bagagem}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Bagagem@{shibarides\+::\+Bagagem}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bagagem\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1Bagagem_aad85c0b035f3f3202130160edc35d41d}{}\label{classshibarides_1_1Bagagem_aad85c0b035f3f3202130160edc35d41d}
 
 
-Função privada que define as regras de validação para o dominio. 
+Metodo que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Para o domínio \hyperlink{classshibarides_1_1Bagagem}{Bagagem}, são aceitos os valores \char`\"{}0\char`\"{}, \char`\"{}1\char`\"{}, \char`\"{}2\char`\"{}, \char`\"{}3\char`\"{} ou \char`\"{}4\char`\"{}.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
 

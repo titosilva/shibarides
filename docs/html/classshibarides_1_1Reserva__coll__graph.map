@@ -1,6 +1,6 @@
 <map id="shibarides::Reserva" name="shibarides::Reserva">
-<area shape="rect" id="node2" href="$classshibarides_1_1Assento.html" title="shibarides::Assento" alt="" coords="5,81,143,108"/>
+<area shape="rect" id="node2" href="$classshibarides_1_1Assento.html" title="Dominio responsável pela preferência de assento do passageiro. " alt="" coords="5,81,143,108"/>
 <area shape="rect" id="node3" href="$classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="171,5,308,32"/>
-<area shape="rect" id="node4" href="$classshibarides_1_1Bagagem.html" title="shibarides::Bagagem" alt="" coords="167,81,311,108"/>
-<area shape="rect" id="node5" href="$classshibarides_1_1CodDeReserva.html" title="shibarides::CodDeReserva" alt="" coords="335,81,514,108"/>
+<area shape="rect" id="node4" href="$classshibarides_1_1Bagagem.html" title="Dominio responsável pelo numero de volumes da bagagem do passageiro. " alt="" coords="167,81,311,108"/>
+<area shape="rect" id="node5" href="$classshibarides_1_1CodDeReserva.html" title="Dominio responsável pelo código de reserva, fornecido pelo sistema. " alt="" coords="335,81,514,108"/>
 </map>

@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Estado}\index{shibarides\+::\+Estado@{shibarides\+::\+Estado}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelos estados de origem e destino das viagens.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Estado\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,29 +31,39 @@ Diagrama de colaboração para shibarides\+:\+:Estado\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1Estado_a87dff745c1b1f487eae4bd4461e8a1ef}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelos estados de origem e destino das viagens. 
+
+Representa os estados nas caronas. Os valores permitidos são representados em siglas para cada estado, e podem ser qualquer estado brasileiro. 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Estado@{shibarides\+::\+Estado}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Estado@{shibarides\+::\+Estado}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Estado\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1Estado_a87dff745c1b1f487eae4bd4461e8a1ef}{}\label{classshibarides_1_1Estado_a87dff745c1b1f487eae4bd4461e8a1ef}
 
 
-Função privada que define as regras de validação para o dominio. 
+Metodo que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Os valores permitidos são representados em siglas para cada estado, e podem ser qualquer estado brasileiro\+: AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Argumento invalido pelas regras do dominio \\
+\hline
+\end{DoxyExceptions}
 
 
 Implementa \hyperlink{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{shibarides\+::\+Dominio}.

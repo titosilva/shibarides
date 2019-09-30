@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Duracao}\index{shibarides\+::\+Duracao@{shibarides\+::\+Duracao}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pela duração das viagens.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Duracao\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,29 +31,39 @@ Diagrama de colaboração para shibarides\+:\+:Duracao\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1Duracao_aa64196edbfe284120c3d498e20212a99}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Metodo que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pela duração das viagens. 
+
+Representa a duração das viagens. Os valores permitidos são representados em horas, podendo ser de 1 a 48. 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Duracao@{shibarides\+::\+Duracao}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Duracao@{shibarides\+::\+Duracao}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Duracao\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1Duracao_aa64196edbfe284120c3d498e20212a99}{}\label{classshibarides_1_1Duracao_aa64196edbfe284120c3d498e20212a99}
 
 
-Função privada que define as regras de validação para o dominio. 
+Metodo que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Os valores permitidos são representados em horas, podendo ser de 1 a 48.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Argumento invalido pelas regras do dominio \\
+\hline
+\end{DoxyExceptions}
 
 
 Implementa \hyperlink{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{shibarides\+::\+Dominio}.

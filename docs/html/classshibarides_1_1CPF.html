@@ -94,6 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="title">Referência da Classe shibarides::CPF</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. ">Dominio</a> responsável pela validação do <a class="el" href="classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. ">CPF</a>.  
+ <a href="classshibarides_1_1CPF.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ShibaRidesDomains_8hpp_source.html">ShibaRidesDomains.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de Hierarquia para shibarides::CPF:</div>
 <div class="dyncontent">
@@ -114,7 +119,7 @@ Diagrama de colaboração para shibarides::CPF:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Métodos Privados</h2></td></tr>
 <tr class="memitem:a0764894456e73dde8130a07f95b68f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classshibarides_1_1CPF.html#a0764894456e73dde8130a07f95b68f08">validate</a> (std::string)  throw (std::invalid_argument)</td></tr>
-<tr class="memdesc:a0764894456e73dde8130a07f95b68f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função privada que define as regras de validação para o dominio.  <a href="#a0764894456e73dde8130a07f95b68f08">Mais...</a><br /></td></tr>
+<tr class="memdesc:a0764894456e73dde8130a07f95b68f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo que define as regras de validação para o dominio.  <a href="#a0764894456e73dde8130a07f95b68f08">Mais...</a><br /></td></tr>
 <tr class="separator:a0764894456e73dde8130a07f95b68f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -130,7 +135,10 @@ Outros membros herdados</h2></td></tr>
 <tr class="memdesc:aa6fca113add7ee85dee788f4325fe564 inherit pub_methods_classshibarides_1_1Dominio"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor armazenado no campo value.  <a href="#aa6fca113add7ee85dee788f4325fe564">Mais...</a><br /></td></tr>
 <tr class="separator:aa6fca113add7ee85dee788f4325fe564 inherit pub_methods_classshibarides_1_1Dominio"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Métodos</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p><a class="el" href="classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. ">Dominio</a> responsável pela validação do <a class="el" href="classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. ">CPF</a>. </p>
+<p>Representa o <a class="el" href="classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. ">CPF</a> do usuario. Os valores são validados por meio do algoritmo de validação para o <a class="el" href="classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. ">CPF</a>. </p><dl class="section see"><dt>Veja também</dt><dd>Explicação do algoritmo <a href="https://www.geradorcpf.com/algoritmo_do_cpf.htm">https://www.geradorcpf.com/algoritmo_do_cpf.htm</a> </dd></dl>
+</div><h2 class="groupheader">Métodos</h2>
 <a class="anchor" id="a0764894456e73dde8130a07f95b68f08"></a>
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +150,7 @@ Outros membros herdados</h2></td></tr>
           <td class="memname">void CPF::validate </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
         <tr>
@@ -159,11 +167,17 @@ Outros membros herdados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Função privada que define as regras de validação para o dominio. </p>
-<p>Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std::invalid_argument.</p>
+<p>Metodo que define as regras de validação para o dominio. </p>
+<p>O método validate implementa as regras de validação para o dominio. Os valores são validados por meio do algoritmo de <a class="el" href="classshibarides_1_1CPF.html" title="Dominio responsável pela validação do CPF. ">CPF</a>, que pode ser encontrado em <a href="https://www.geradorcpf.com/algoritmo_do_cpf.htm">link</a></p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">string</td><td>Valor a ser validado. </td></tr>
+    <tr><td class="paramname">value</td><td>Valor a ser validado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Argumento invalido pelas regras do dominio </td></tr>
   </table>
   </dd>
 </dl>
