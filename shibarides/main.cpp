@@ -1,11 +1,13 @@
 #include <iostream>
 #include "ShibaRidesDomains.hpp"
 #include "ShibaRidesDomainsUT.hpp"
+#include "ShibaRidesEntities.hpp"
+#include "ShibaRidesEntitiesUT.hpp"
 
 using namespace std;
 using namespace shibarides;
 
-template<class TU>
+template<class TUBase, class TU>
 void runTest(string label){
     TU tu;
 
@@ -15,37 +17,45 @@ void runTest(string label){
     int r = tu.run();
 
     switch(r){
-    case TUDominio::SUCCESS:
-        cout << "SUCCESS" << endl;
+    case TUBase::SUCCESS:
+        cout << "SUCCESS" <<  endl;
         break;
-    case TUDominio::FAIL:
-        cout << "FAIL" << endl;
+    case TUBase::FAIL:
+        cout << "FAIL" <<  endl;
         break;
-    default:
-        cout << "UNDEFINED" << endl;
     }
 
 }
 
 int main(){
-    runTest<TUAssento>("Assento");
-    runTest<TUBagagem>("Bagagem");
-    runTest<TUCodDeBanco>("CodDeBanco");
-    runTest<TUCodDeCarona>("CodDeCarona");
-    runTest<TUCodDeReserva>("CodDeReserva");
-    runTest<TUCidade>("Cidade");
-    runTest<TUCPF>("CPF");
-    runTest<TUData>("Data");
-    runTest<TUDuracao>("Duracao");
-    runTest<TUEstado>("Estado");
-    runTest<TUEmail>("Email");
-    runTest<TUNome>("Nome");
-    runTest<TUNumDeAgencia>("NumDeAgencia");
-    runTest<TUNumDeConta>("NumDeConta");
-    runTest<TUPreco>("Preco");
-    runTest<TUTelefone>("Telefone");
-    runTest<TUSenha>("Senha");
-    runTest<TUVagas>("Vagas");
+    cout<<  "===== DOMAINS =====" <<  endl;
+
+    runTest<TUDominio,TUAssento>("Assento");
+    runTest<TUDominio,TUBagagem>("Bagagem");
+    runTest<TUDominio,TUCodDeBanco>("CodDeBanco");
+    runTest<TUDominio,TUCodDeCarona>("CodDeCarona");
+    runTest<TUDominio,TUCodDeReserva>("CodDeReserva");
+    runTest<TUDominio,TUCidade>("Cidade");
+    runTest<TUDominio,TUCPF>("CPF");
+    runTest<TUDominio,TUData>("Data");
+    runTest<TUDominio,TUDuracao>("Duracao");
+    runTest<TUDominio,TUEstado>("Estado");
+    runTest<TUDominio,TUEmail>("Email");
+    runTest<TUDominio,TUNome>("Nome");
+    runTest<TUDominio,TUNumDeAgencia>("NumDeAgencia");
+    runTest<TUDominio,TUNumDeConta>("NumDeConta");
+    runTest<TUDominio,TUPreco>("Preco");
+    runTest<TUDominio,TUTelefone>("Telefone");
+    runTest<TUDominio,TUSenha>("Senha");
+    runTest<TUDominio,TUVagas>("Vagas");
+
+    cout<< endl << "===== ENTITIES =====" <<  endl;
+
+    runTest<TUEntidade, TUUsuario>("Usuario");
+    runTest<TUEntidade, TUConta>("Conta");
+    runTest<TUEntidade, TUReserva>("Usuario");
+    runTest<TUEntidade, TUUsuario>("Usuario");
+
 
     return 0;
 }
