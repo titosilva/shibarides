@@ -47,5 +47,15 @@ private:
     void destroyEntity();
 };
 
+class TUCarona : public TUEntidade{
+private:
+    Carona *carona;
+private:
+    void createEntity();
+    void testMethods();
+    void destroyEntity();
 };
+
+};
+
 #endif // SHIBARIDESENTITIES_HPP_INCLUDED

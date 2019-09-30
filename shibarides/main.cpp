@@ -18,17 +18,17 @@ void runTest(string label){
 
     switch(r){
     case TUBase::SUCCESS:
-        cout << "\033[92m" << "SUCCESS" << "\033[0m" << endl;
+        cout << "SUCCESS" <<  endl;
         break;
     case TUBase::FAIL:
-        cout << "\033[91m" << "FAIL" << "\033[0m" << endl;
+        cout << "FAIL" <<  endl;
         break;
     }
 
 }
 
 int main(){
-    cout<< "\033[94m" << "===== DOMAINS =====" << "\033[0m" << endl;
+    cout<<  "===== DOMAINS =====" <<  endl;
 
     runTest<TUDominio,TUAssento>("Assento");
     runTest<TUDominio,TUBagagem>("Bagagem");
@@ -49,8 +49,11 @@ int main(){
     runTest<TUDominio,TUSenha>("Senha");
     runTest<TUDominio,TUVagas>("Vagas");
 
-    cout<< endl << "\033[94m" << "===== ENTITIES =====" << "\033[0m" << endl;
+    cout<< endl << "===== ENTITIES =====" <<  endl;
 
+    runTest<TUEntidade, TUUsuario>("Usuario");
+    runTest<TUEntidade, TUConta>("Conta");
+    runTest<TUEntidade, TUReserva>("Usuario");
     runTest<TUEntidade, TUUsuario>("Usuario");
 
 
