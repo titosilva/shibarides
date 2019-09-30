@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Telefone}\index{shibarides\+::\+Telefone@{shibarides\+::\+Telefone}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelos telefones dos usuários.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Telefone\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,29 +31,43 @@ Diagrama de colaboração para shibarides\+:\+:Telefone\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1Telefone_aa798f740a30faef8d2599950284ded33}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pelos telefones dos usuários. 
+
+Representa os números de telefone definidos pelos usuarios. Os valores devem seguir o formato a seguir\+:
+
+X\+X-\/\+Y\+Y-\/\+Z\+Z\+Z\+Z\+Z\+Z\+Z\+ZZ onde cada X, Y ou Z é dígito (0 -\/ 9); o valor de XX não pode ser 00, o valor de YY não pode ser 00 e o valor de Z\+Z\+Z\+Z\+Z\+Z\+Z\+ZZ não pode ser 000000000. 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Telefone@{shibarides\+::\+Telefone}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Telefone@{shibarides\+::\+Telefone}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Telefone\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1Telefone_aa798f740a30faef8d2599950284ded33}{}\label{classshibarides_1_1Telefone_aa798f740a30faef8d2599950284ded33}
 
 
-Função privada que define as regras de validação para o dominio. 
+Método que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Os valores devem seguir o formato a seguir\+:
+
+X\+X-\/\+Y\+Y-\/\+Z\+Z\+Z\+Z\+Z\+Z\+Z\+ZZ onde cada X, Y ou Z é dígito (0 -\/ 9); o valor de XX não pode ser 00, o valor de YY não pode ser 00 e o valor de Z\+Z\+Z\+Z\+Z\+Z\+Z\+ZZ não pode ser 000000000.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Argumento invalido pelas regras do dominio \\
+\hline
+\end{DoxyExceptions}
 
 
 Implementa \hyperlink{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{shibarides\+::\+Dominio}.

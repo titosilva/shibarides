@@ -2,6 +2,15 @@
 \label{classshibarides_1_1Vagas}\index{shibarides\+::\+Vagas@{shibarides\+::\+Vagas}}
 
 
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pela quantidade de vagas em uma carona.  
+
+
+
+
+{\ttfamily \#include $<$Shiba\+Rides\+Domains.\+hpp$>$}
+
+
+
 Diagrama de Hierarquia para shibarides\+:\+:Vagas\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,29 +31,39 @@ Diagrama de colaboração para shibarides\+:\+:Vagas\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classshibarides_1_1Vagas_ae5f73c52819397524b0334d9e609d296}{validate} (std\+::string)  throw (std\+::invalid\+\_\+argument)
-\begin{DoxyCompactList}\small\item\em Função privada que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método que define as regras de validação para o dominio. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
+
+\subsection{Descrição Detalhada}
+\hyperlink{classshibarides_1_1Dominio}{Dominio} responsável pela quantidade de vagas em uma carona. 
+
+Representa as vagas disponíveis em uma carona dos usuários. Os valores devem ser de 0 a 4. 
 
 \subsection{Métodos}
 \index{shibarides\+::\+Vagas@{shibarides\+::\+Vagas}!validate@{validate}}
 \index{validate@{validate}!shibarides\+::\+Vagas@{shibarides\+::\+Vagas}}
 \subsubsection[{\texorpdfstring{validate(std\+::string)}{validate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vagas\+::validate (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{}
+\item[{std\+::string}]{value}
 \end{DoxyParamCaption}
 ) throw  std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classshibarides_1_1Vagas_ae5f73c52819397524b0334d9e609d296}{}\label{classshibarides_1_1Vagas_ae5f73c52819397524b0334d9e609d296}
 
 
-Função privada que define as regras de validação para o dominio. 
+Método que define as regras de validação para o dominio. 
 
-Função pura abstrata, que é sobrescrita nos domínios e define o comportamento de cada domínio. Caso o valor passado nao seja valido, é lançada uma excessão std\+::invalid\+\_\+argument.
+O método validate implementa as regras de validação para o dominio. Os valores devem ser de 0 a 4.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em string} & Valor a ser validado. \\
+{\em value} & Valor a ser validado \\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Argumento invalido pelas regras do dominio \\
+\hline
+\end{DoxyExceptions}
 
 
 Implementa \hyperlink{classshibarides_1_1Dominio_acc9445531455c072bbf708709aebbe55}{shibarides\+::\+Dominio}.

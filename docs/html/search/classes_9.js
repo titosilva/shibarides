@@ -3,6 +3,7 @@ var searchData=
   ['telefone',['Telefone',['../classshibarides_1_1Telefone.html',1,'shibarides']]],
   ['tuassento',['TUAssento',['../classshibarides_1_1TUAssento.html',1,'shibarides']]],
   ['tubagagem',['TUBagagem',['../classshibarides_1_1TUBagagem.html',1,'shibarides']]],
+  ['tucarona',['TUCarona',['../classshibarides_1_1TUCarona.html',1,'shibarides']]],
   ['tucidade',['TUCidade',['../classshibarides_1_1TUCidade.html',1,'shibarides']]],
   ['tucoddebanco',['TUCodDeBanco',['../classshibarides_1_1TUCodDeBanco.html',1,'shibarides']]],
   ['tucoddecarona',['TUCodDeCarona',['../classshibarides_1_1TUCodDeCarona.html',1,'shibarides']]],
