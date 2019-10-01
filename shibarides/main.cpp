@@ -53,9 +53,7 @@ int main(){
 
     runTest<TUEntidade, TUUsuario>("Usuario");
     runTest<TUEntidade, TUConta>("Conta");
-    runTest<TUEntidade, TUReserva>("Usuario");
-    runTest<TUEntidade, TUUsuario>("Usuario");
-
+    runTest<TUEntidade, TUReserva>("Reserva");
 
     return 0;
 }
