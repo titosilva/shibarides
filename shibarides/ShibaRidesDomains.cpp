@@ -5,20 +5,16 @@ using namespace shibarides;
 
 // Base class
 Dominio::Dominio(){
-    this->valueSet = false;
     this->value = "";
 }
-
 
 void Dominio::setValue(std::string value) throw (std::invalid_argument){
     this->validate(value);
     this->value = value;
-    this->valueSet = true;
 }
 
 std::string Dominio::getValue() const{
-    if(this->valueSet) return this->value;
-    else return "";
+    return this->value;
 }
 
 // Domains
@@ -142,7 +138,6 @@ void CPF::validate(std::string value) throw (std::invalid_argument){
 
 // Data
 void Data::validate(std::string value) throw (std::invalid_argument){
-    int tamanho_string = 0;
     int valor = (int)value[9]+(int)value[8]*10;
     if (value.length()!=10)throw (std::invalid_argument("Argument must have 10 chars"));
     if((value[0] >= 48 && value[0] <= 57)||(value[1] >= 48 && value[1] <= 57)||(value[3] >= 48 && value[3] <= 57)||

@@ -460,7 +460,7 @@ void TUPreco::genFailValues(){
 }
 
 void TUPreco::genSuccessValues(){
-    this->successValues.push_back("90.00");
+    this->successValues.push_back("90.02");
     this->successValues.push_back("5000.00");
 }
 
