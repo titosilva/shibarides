@@ -32,14 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ShibaRidesDomains.cpp" />
-		<Unit filename="ShibaRidesDomains.hpp" />
-		<Unit filename="ShibaRidesDomainsUT.cpp" />
-		<Unit filename="ShibaRidesDomainsUT.hpp" />
-		<Unit filename="ShibaRidesEntities.cpp" />
-		<Unit filename="ShibaRidesEntities.hpp" />
-		<Unit filename="ShibaRidesEntitiesUT.cpp" />
-		<Unit filename="ShibaRidesEntitiesUT.hpp" />
+		<Unit filename="domains/ShibaRidesDomains.cpp" />
+		<Unit filename="domains/ShibaRidesDomains.hpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.cpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.hpp" />
+		<Unit filename="entities/ShibaRidesEntities.cpp" />
+		<Unit filename="entities/ShibaRidesEntities.hpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.cpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
