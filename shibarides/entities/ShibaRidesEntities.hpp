@@ -1,6 +1,6 @@
 #ifndef SHIBARIDESENTITIES_HPP_INCLUDED
 #define SHIBARIDESENTITIES_HPP_INCLUDED
-#include "ShibaRidesDomains.hpp"
+#include "../domains/ShibaRidesDomains.hpp"
 
 
 namespace shibarides{
