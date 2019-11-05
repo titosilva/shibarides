@@ -40,6 +40,7 @@
 		<Unit filename="entities/ShibaRidesEntities.hpp" />
 		<Unit filename="entities/ShibaRidesEntitiesUT.cpp" />
 		<Unit filename="entities/ShibaRidesEntitiesUT.hpp" />
+		<Unit filename="interface/ShibaRidesAuthInterfaces.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
