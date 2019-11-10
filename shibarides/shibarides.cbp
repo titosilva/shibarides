@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="auth/ShibaRidesAuthCntr.cpp" />
+		<Unit filename="auth/ShibaRidesAuthCntr.h" />
+		<Unit filename="auth/ShibaRidesAuthInterfaces.h" />
 		<Unit filename="domains/ShibaRidesDomains.cpp" />
 		<Unit filename="domains/ShibaRidesDomains.hpp" />
 		<Unit filename="domains/ShibaRidesDomainsUT.cpp" />
@@ -40,7 +43,6 @@
 		<Unit filename="entities/ShibaRidesEntities.hpp" />
 		<Unit filename="entities/ShibaRidesEntitiesUT.cpp" />
 		<Unit filename="entities/ShibaRidesEntitiesUT.hpp" />
-		<Unit filename="interface/ShibaRidesAuthInterfaces.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

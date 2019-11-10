@@ -1,5 +1,10 @@
+#ifndef SHIBA_INTERFACE_AUTH_H__
+#define SHIBA_INTERFACE_AUTH_H__
+
 #include <stdexcept>
+#include "../domains/ShibaRidesDomains.hpp"
 using namespace std;
+using namespace shibarides;
 
 // Interfaces do subsistema de autenticaçao
 
@@ -13,15 +18,20 @@ class IAuthView{
 // Métodos abstratos puros que serão sorbeescritos pelas classes controladoras
 public:
     // Mostra tela de login e realiza login
-    virtual void login()=0;
+    virtual bool login() throw (runtime_error) = 0;
+
+    // Seta a controladora
+    virtual void setServiceController(IAuthView *) = 0;
 
     // Metodo virtual destrutor
-    virtual ~IAuthView();
+    virtual ~IAuthView(){};
 };
 
 class IAuthServ{
 // Métodos abstratos puros que serão sorbeescritos pelas classes controladoras
 public:
     // Realiza a autenticação de um usuario
-    virtual void authenticate() throw (runtime_error)=0;
+    virtual bool authenticate(Email email, Senha senha) throw (runtime_error)=0;
 };
+
+#endif // SHIBA_INTERFACE_AUTH_H__
