@@ -11,7 +11,6 @@ void CntrAuthView::setServiceController(IAuthView *cntr){
 bool CntrAuthView::login() throw (runtime_error){
     // Mostra a tela de login, obtem os dados
 
-
     // Passa os dados para a camada inferior e verifica se foi possivel
     // realizar a autenticação
 }
