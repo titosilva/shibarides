@@ -1,5 +1,5 @@
-#ifndef SHIBA_INTERFACE_AUTH_H__
-#define SHIBA_INTERFACE_AUTH_H__
+#ifndef SHIBA_AUTH_INTERFACES_H__
+#define SHIBA_AUTH_INTERFACES_H__
 
 #include <stdexcept>
 #include "../domains/ShibaRidesDomains.hpp"
@@ -34,4 +34,4 @@ public:
     virtual bool authenticate(Email email, Senha senha) throw (runtime_error)=0;
 };
 
-#endif // SHIBA_INTERFACE_AUTH_H__
+#endif // SHIBA_AUTH_INTERFACES_H__

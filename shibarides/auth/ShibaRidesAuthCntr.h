@@ -1,9 +1,10 @@
-#ifndef SHIBA_CNTRL_H__
-#define SHIBA_CNTRL_H__
+#ifndef SHIBA_AUTH_CNTRL_H__
+#define SHIBA_AUTH_CNTRL_H__
 
 #include "ShibaRidesAuthInterfaces.h"
 #include "../domains/ShibaRidesDomains.hpp"
 
+// Controladoras
 // Classe que implementa a interface IAuthView
 class CntrAuthView;
 // Classe que implementa a interface IAuthServ
@@ -23,4 +24,4 @@ public:
     bool authenticate(Email email, Senha senha) throw(runtime_error);
 };
 
-#endif // SHIBA_CNTRL_H__
+#endif // SHIBA_AUTH_CNTRL_H__
