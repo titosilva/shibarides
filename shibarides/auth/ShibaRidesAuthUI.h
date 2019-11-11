@@ -1,14 +1,7 @@
 #ifndef SHIBA_AUTH_UI_H__
 #define SHIBA_AUTH_UI_H__
 
-// Inclusão da biblioteca curses
-#ifdef __unix__
-    #include <ncurses.h>
-#endif // __unix__
-
-#ifdef _WIN32
-#endif // _WIN32
-
+#include "../ShibaUI.h"
 #include "../domains/ShibaRidesDomains.hpp"
 #include <stdexcept>
 using namespace std;
