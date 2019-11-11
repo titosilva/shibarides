@@ -18,10 +18,10 @@ class IAuthView{
 // Métodos abstratos puros que serão sorbeescritos pelas classes controladoras
 public:
     // Mostra tela de login e realiza login
-    virtual bool login() throw (runtime_error) = 0;
+    virtual bool login(Email &email) throw (runtime_error) = 0;
 
     // Seta a controladora
-    virtual void setServiceController(IAuthView *) = 0;
+    virtual void setServiceController(IAuthServ *) = 0;
 
     // Metodo virtual destrutor
     virtual ~IAuthView(){};

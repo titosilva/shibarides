@@ -14,7 +14,7 @@ private:
     // Referencia para o servidor
     IAuthServ *service;
 public:
-    bool login() throw (runtime_error);
+    bool login(Email &email) throw (runtime_error);
     void setServiceController(IAuthServ *);
 };
 
