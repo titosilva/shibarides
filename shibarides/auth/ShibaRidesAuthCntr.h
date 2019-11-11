@@ -15,18 +15,12 @@ private:
     IAuthServ *service;
 public:
     bool login() throw (runtime_error);
-    void setServiceController(IAuthView *);
+    void setServiceController(IAuthServ *);
 };
-
-class CntrAuthServ : publi IAuthServ{
-public:
-    bool authenticate(Email email, Senha senha) throw(runtime_error);
-}
 
 class CntrAuthServ : public IAuthServ{
 public:
-    // Realiza a autenticação de um usuario
-    bool authenticate(Email email, Senha senha) throw (runtime_error)=0;
+    bool authenticate(Email email, Senha senha) throw(runtime_error);
 };
 
 #endif // SHIBA_CNTRL_H__
