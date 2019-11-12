@@ -15,7 +15,7 @@ int main(){
     initscr();
     cbreak();
     noecho();
-    nodelay(stdscr, TRUE);
+    //nodelay(stdscr, TRUE);
     scrollok(stdscr, TRUE);
 
     // Inicia alguns pares de cores
@@ -25,14 +25,19 @@ int main(){
 
     // Mostra tela principal
     Email email;
-    switch(InitMainUI::show()){
-        case InitMainUI::INIT_MAIN_LOGIN:
-            authview->login(email);
-            break;
-        case InitMainUI::INIT_MAIN_SIGNUP:
-            break;
-        case InitMainUI::INIT_MAIN_EXIT:
-            break;
+    // controla o loop
+    bool cntr=true;
+    while(cntr){
+        switch(InitMainUI::show()){
+            case InitMainUI::INIT_MAIN_LOGIN:
+                cntr = !authview->login(email);
+                break;
+            case InitMainUI::INIT_MAIN_SIGNUP:
+                break;
+            case InitMainUI::INIT_MAIN_EXIT:
+                cntr = false;
+                break;
+        }
     }
 
     endwin();

@@ -35,6 +35,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ShibaUI.cpp" />
 		<Unit filename="ShibaUI.h" />
 		<Unit filename="auth/ShibaRidesAuth.h" />
 		<Unit filename="auth/ShibaRidesAuthCntr.cpp" />
