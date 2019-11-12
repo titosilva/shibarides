@@ -15,11 +15,12 @@ int main(){
     initscr();
     cbreak();
     noecho();
-    //nodelay(stdscr, TRUE);
+    nodelay(stdscr, TRUE);
     scrollok(stdscr, TRUE);
+    keypad(stdscr, TRUE);
 
-    // Inicia alguns pares de cores
     start_color();
+
     init_pair(1, COLOR_RED  , COLOR_BLACK);
     init_pair(2, COLOR_GREEN, COLOR_BLACK);
 

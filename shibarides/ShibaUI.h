@@ -9,10 +9,10 @@
 #ifdef _WIN32
 #endif // _WIN32
 
-#define ARROWDOWN    66
-#define ARROWUP      65
-#define ARROWLEFT    68
-#define ARROWRIGHT   67
+#define ARROWDOWN    KEY_DOWN
+#define ARROWUP      KEY_UP
+#define ARROWLEFT    KEY_LEFT
+#define ARROWRIGHT   KEY_RIGHT
 #define ENTER        10
 
 // Função para obter eventos de key press

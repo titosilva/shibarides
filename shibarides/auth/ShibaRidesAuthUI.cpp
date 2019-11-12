@@ -56,8 +56,8 @@ bool AuthLoginUI::show(Email &email, Senha &senha) throw (invalid_argument){
 
         // Analisa o botao apertado
         char c = getch();
-        
-        if(c==ARROWDOWN)
+
+        if (c==ARROWDOWN)
             sel = (sel+1)%4;
         else if(c==ARROWUP)
             sel = (sel-1)%4;
