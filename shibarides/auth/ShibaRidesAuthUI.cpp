@@ -73,7 +73,7 @@ bool AuthLoginUI::show(Email &email, Senha &senha) throw (invalid_argument){
                         email.setValue(emailentry);
                         senha.setValue(senhaentry);
                     }catch(const invalid_argument &e){
-                        AuthErrorUI::show("Invalid argument!");
+                        AuthErrorUI::show(e.what());
                     }
                     break;
                 case 3:
@@ -88,7 +88,7 @@ bool AuthLoginUI::show(Email &email, Senha &senha) throw (invalid_argument){
                 }else if(sel==1){
                     senhaentry[strlen(senhaentry)] = c;
                 }
-            }else if(c==0x7f){
+            }else if(c==BACKSPACE){
                 if(sel==0){
                     emailentry[strlen(emailentry)-1] = '\0';
                 }else if(sel==1){
@@ -109,6 +109,8 @@ void AuthErrorUI::show(string error){
     char title[] = "ERROR";
     mvprintw(y/2-2, x/2-strlen(title)/2, "%s", title);
     mvprintw(y/2, x/2-strlen(error.c_str())/2, "%s", error.c_str());
+
+    // Espera o usuario apertar algum botao
     while(!kbhit());
 
     attroff(COLOR_PAIR(1));

@@ -14,6 +14,7 @@
 #define ARROWLEFT    KEY_LEFT
 #define ARROWRIGHT   KEY_RIGHT
 #define ENTER        10
+#define BACKSPACE    KEY_BACKSPACE
 
 // Função para obter eventos de key press
 int kbhit(void);

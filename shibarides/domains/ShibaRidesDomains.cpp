@@ -368,12 +368,12 @@ void Senha::validate(std::string value) throw (std::invalid_argument){
     int check_repetidas = 0;
     int check_letter = 0;
     int check_num = 0;
-    if (value.size() > 5){ throw (std::invalid_argument("Argument must have less than 6 chars"));}
+    if (value.size() > 5){ throw (std::invalid_argument("Password must have less than 6 chars"));}
     for (tamanho_string = 0;tamanho_string < value.size();tamanho_string++){
         if((value[tamanho_string] >= 65 && value[tamanho_string] <= 90) || (value[tamanho_string] >= 97 && value[tamanho_string] <= 122 )||
            (value[tamanho_string] >= 48 && value[tamanho_string] <= 57) || (value[tamanho_string] >= 35 && value[tamanho_string] <= 38)){
            }
-        else {throw (std::invalid_argument("Argument must be letters,numbers,%,$,# or &"));}
+        else {throw (std::invalid_argument("Password characters must be letters, numbers, %, $, # or &"));}
 
         if((value[tamanho_string] >= 65 && value[tamanho_string] <= 90) || (value[tamanho_string] >= 97 && value[tamanho_string] <= 122 ))
             {check_letter+=1;}
@@ -385,20 +385,20 @@ void Senha::validate(std::string value) throw (std::invalid_argument){
 
         for(check_repetidas = tamanho_string+1; check_repetidas < value.length();check_repetidas++){
             if(value[tamanho_string] == value[check_repetidas])
-                throw (std::invalid_argument("cant have two equal chars in the password"));
+                throw (std::invalid_argument("Can't have two equal chars in the password"));
         }
     }
-    if(check_num == 0)throw (std::invalid_argument("need at least one number in the password"));
-    if(check_letter == 0)throw (std::invalid_argument("need at least one letter in the password"));
+    if(check_num == 0)throw (std::invalid_argument("Need at least one number in the password"));
+    if(check_letter == 0)throw (std::invalid_argument("Need at least one letter in the password"));
 }
 
 // Vagas
 void Vagas::validate(std::string value) throw (std::invalid_argument){
     unsigned int tamanho_string = 0;
-    if (value.length()>1) throw (std::invalid_argument("Argument must be from 0 to 4"));
+    if (value.length()>1) throw (std::invalid_argument("Vaga must be from 0 to 4"));
     for (tamanho_string = 0;tamanho_string < value.length();tamanho_string++){
         if(value[tamanho_string] < 48 || value[tamanho_string] > 52)
-            throw (std::invalid_argument("Argument must be from 0 to 4"));
+            throw (std::invalid_argument("Vaga must be from 0 to 4"));
     }
 }
 
