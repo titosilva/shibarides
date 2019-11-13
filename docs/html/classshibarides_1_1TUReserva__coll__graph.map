@@ -1,8 +1,0 @@
-<map id="shibarides::TUReserva" name="shibarides::TUReserva">
-<area shape="rect" id="node2" href="$classshibarides_1_1TUEntidade.html" title="shibarides::TUEntidade" alt="" coords="5,171,164,197"/>
-<area shape="rect" id="node3" href="$classshibarides_1_1Reserva.html" title="Classe que representa a entidade de Reserva. " alt="" coords="189,171,327,197"/>
-<area shape="rect" id="node4" href="$classshibarides_1_1Assento.html" title="Dominio responsável pela preferência de assento do passageiro. " alt="" coords="24,81,161,108"/>
-<area shape="rect" id="node5" href="$classshibarides_1_1Dominio.html" title="Classe abstrata que serve de base para os domínios. " alt="" coords="189,5,327,32"/>
-<area shape="rect" id="node6" href="$classshibarides_1_1Bagagem.html" title="Dominio responsável pelo numero de volumes da bagagem do passageiro. " alt="" coords="186,81,330,108"/>
-<area shape="rect" id="node7" href="$classshibarides_1_1CodDeReserva.html" title="Dominio responsável pelo código de reserva, fornecido pelo sistema. " alt="" coords="354,81,533,108"/>
-</map>
