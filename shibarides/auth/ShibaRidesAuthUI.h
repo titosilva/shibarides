@@ -9,6 +9,7 @@
 #ifdef _WIN32
 #endif // _WIN32
 
+#include "../ShibaUI.h"
 #include "../domains/ShibaRidesDomains.hpp"
 #include <stdexcept>
 using namespace std;
