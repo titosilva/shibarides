@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="shibarides" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/shibarides" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="ncurses" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/shibarides" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="ShibaUI.cpp" />
+		<Unit filename="ShibaUI.h" />
+		<Unit filename="auth/ShibaRidesAuth.h" />
+		<Unit filename="auth/ShibaRidesAuthCntr.cpp" />
+		<Unit filename="auth/ShibaRidesAuthCntr.h" />
+		<Unit filename="auth/ShibaRidesAuthInterfaces.h" />
+		<Unit filename="auth/ShibaRidesAuthStubs.cpp" />
+		<Unit filename="auth/ShibaRidesAuthStubs.h" />
+		<Unit filename="auth/ShibaRidesAuthUI.cpp" />
+		<Unit filename="auth/ShibaRidesAuthUI.h" />
+		<Unit filename="domains/ShibaRidesDomains.cpp" />
+		<Unit filename="domains/ShibaRidesDomains.hpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.cpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.hpp" />
+		<Unit filename="entities/ShibaRidesEntities.cpp" />
+		<Unit filename="entities/ShibaRidesEntities.hpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.cpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.hpp" />
+		<Unit filename="init/ShibaRidesInitUI.cpp" />
+		<Unit filename="init/ShibaRidesInitUI.h" />
+		<Unit filename="init/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
