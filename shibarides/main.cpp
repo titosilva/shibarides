@@ -1,8 +1,8 @@
 #include <iostream>
-#include "ShibaRidesDomains.hpp"
-#include "ShibaRidesDomainsUT.hpp"
-#include "ShibaRidesEntities.hpp"
-#include "ShibaRidesEntitiesUT.hpp"
+#include "domains/ShibaRidesDomains.hpp"
+#include "domains/ShibaRidesDomainsUT.hpp"
+#include "entities/ShibaRidesEntities.hpp"
+#include "entities/ShibaRidesEntitiesUT.hpp"
 
 using namespace std;
 using namespace shibarides;

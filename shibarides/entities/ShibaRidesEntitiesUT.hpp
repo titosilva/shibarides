@@ -2,7 +2,7 @@
 #define SHIBARIDESENTITIESUT_HPP_INCLUDED
 
 #include "ShibaRidesEntities.hpp"
-#include "ShibaRidesDomains.hpp"
+#include "../domains/ShibaRidesDomains.hpp"
 #include <vector>
 
 namespace shibarides{

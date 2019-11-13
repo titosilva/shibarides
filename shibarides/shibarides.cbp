@@ -32,15 +32,46 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ShibaRidesDomains.cpp" />
-		<Unit filename="ShibaRidesDomains.hpp" />
-		<Unit filename="ShibaRidesDomainsUT.cpp" />
-		<Unit filename="ShibaRidesDomainsUT.hpp" />
-		<Unit filename="ShibaRidesEntities.cpp" />
-		<Unit filename="ShibaRidesEntities.hpp" />
-		<Unit filename="ShibaRidesEntitiesUT.cpp" />
-		<Unit filename="ShibaRidesEntitiesUT.hpp" />
+		<Unit filename="auth/ShibaRidesAuthCntr.cpp" />
+		<Unit filename="auth/ShibaRidesAuthCntr.h" />
+		<Unit filename="auth/ShibaRidesAuthInterfaces.h" />
+		<Unit filename="auth/ShibaRidesAuthStubs.cpp" />
+		<Unit filename="auth/ShibaRidesAuthStubs.h" />
+		<Unit filename="auth/ShibaRidesAuthUI.cpp" />
+		<Unit filename="auth/ShibaRidesAuthUI.h" />
+		<Unit filename="domains/ShibaRidesDomains.cpp" />
+		<Unit filename="domains/ShibaRidesDomains.hpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.cpp" />
+		<Unit filename="domains/ShibaRidesDomainsUT.hpp" />
+		<Unit filename="entities/ShibaRidesEntities.cpp" />
+		<Unit filename="entities/ShibaRidesEntities.hpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.cpp" />
+		<Unit filename="entities/ShibaRidesEntitiesUT.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="ride/ShibaRidersRideCntr.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="ride/ShibaRidersRideInterface.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="ride/ShibaRidersRideStubs.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="ride/ShibaRidersRideUI.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="user/ShibaRidersUserCntr.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="user/ShibaRidersUserInterfaces.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="user/ShibaRidersUserStubs.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="user/ShibaRidersUserUI.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

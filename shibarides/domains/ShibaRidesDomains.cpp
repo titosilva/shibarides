@@ -68,7 +68,7 @@ void Cidade::validate(std::string value) throw (std::invalid_argument){
 
     if (value.length()>10) throw (std::invalid_argument("Argument must have less than 11 chars"));
 
-    for (int i=0; i < value.length(); i++){
+    for (unsigned int i=0; i < value.length(); i++){
         if( !( (value[i] > 'A' && value[i] <= 'Z') || (value[i] >= 'a' && value[i] <= 'z' ) || value[i] == '.' || value[i] == ' ')){
             throw (std::invalid_argument("Argument must be letters, spaces or comas"));
         }
@@ -183,7 +183,7 @@ void Data::validate(std::string value) throw (std::invalid_argument){
 
 // Duracao
 void Duracao::validate(std::string value) throw (std::invalid_argument){
-    for(int i=0; i < value.length(); i++){
+    for(unsigned int i=0; i < value.length(); i++){
         if(value[i] > '9' || value[i]< '0')
             throw (std::invalid_argument("Argument must be a number"));
     }
@@ -206,16 +206,16 @@ void Estado::validate(std::string value) throw (std::invalid_argument){
 void Email::validate(std::string value) throw (std::invalid_argument){
     int check_arroba = 0;
     // Verify if every character is @, dot or letter
-    for(int i=0; i<value.size(); i++)
+    for(unsigned int i=0; i<value.size(); i++)
         if( !(value[i] == '@' || value[i] == '.' || (value[i]>='a' && value[i]<='z') || (value[i]>='A' && value[i]<='Z')) )
             throw (std::invalid_argument("Argument must use only @, dots or letters"));
 
     // Count the number of @ and verify if it's ok
-    for(int i = 0; i < value.size(); i++) if(value[i] == '@') check_arroba++;
+    for(unsigned int i = 0; i < value.size(); i++) if(value[i] == '@') check_arroba++;
     if(check_arroba!=1) throw (std::invalid_argument("Invalid email"));
 
     // Verify the dots positions
-    for(int i=0; i<value.size(); i++){
+    for(unsigned int i=0; i<value.size(); i++){
         if(value[i]=='.'){
             // "Local" started with a dot
             if(i==0) throw (std::invalid_argument("Argument must not start with a dot"));
@@ -237,7 +237,7 @@ void Email::validate(std::string value) throw (std::invalid_argument){
 
 // Nome
 void Nome::validate(std::string value) throw (std::invalid_argument){
-    int tamanho_string = 0;
+    unsigned int tamanho_string = 0;
     int check_letter = 0;
     if (value.length()>20)throw (std::invalid_argument("Argument must have less than 21 chars"));
     for (tamanho_string = 0;tamanho_string < value.length();tamanho_string++){
@@ -332,7 +332,7 @@ void NumDeConta::validate(std::string value) throw (std::invalid_argument){
 // Preco
 void Preco::validate(std::string value) throw (std::invalid_argument){
     double valor = ::atof(value.c_str());
-    int tamanho_string = 0;
+    unsigned int tamanho_string = 0;
     if (valor < 0 || valor > 5000) throw (std::invalid_argument("Argument must be bigger than 0,00 and smaller than 5000,01"));
     for (tamanho_string = 0;tamanho_string < value.size();tamanho_string++){
         if((value[tamanho_string] >= '0' && value[tamanho_string] <= '9') || value[tamanho_string] == '.'){
@@ -364,7 +364,7 @@ void Telefone::validate(std::string value) throw (std::invalid_argument){
 
 // Senha
 void Senha::validate(std::string value) throw (std::invalid_argument){
-    int tamanho_string = 0;
+    unsigned int tamanho_string = 0;
     int check_repetidas = 0;
     int check_letter = 0;
     int check_num = 0;
@@ -394,7 +394,7 @@ void Senha::validate(std::string value) throw (std::invalid_argument){
 
 // Vagas
 void Vagas::validate(std::string value) throw (std::invalid_argument){
-    int tamanho_string = 0;
+    unsigned int tamanho_string = 0;
     if (value.length()>1) throw (std::invalid_argument("Argument must be from 0 to 4"));
     for (tamanho_string = 0;tamanho_string < value.length();tamanho_string++){
         if(value[tamanho_string] < 48 || value[tamanho_string] > 52)
