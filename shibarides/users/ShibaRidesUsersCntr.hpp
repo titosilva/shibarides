@@ -21,7 +21,7 @@ public:
 
 class CntrUsersServ : public IUserServ{
 public:
-    bool edit(Nome nome, Email email, Senha senha, Telefone telefone, CPF cpf) throw(runtime_error);
+    bool edit(Email email, Senha senha, Nome nome, Telefone telefone, CPF cpf) throw(runtime_error);
 };
 
 

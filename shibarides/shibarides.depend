@@ -1,0 +1,129 @@
+# depslib dependency file v1.0
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthcntr.cpp
+	"ShibaRidesAuthInterfaces.h"
+	"ShibaRidesAuthCntr.h"
+	"ShibaRidesAuthUI.h"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthinterfaces.h
+	<stdexcept>
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\domains\shibaridesdomains.hpp
+	<stdexcept>
+	<string>
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthcntr.h
+	"ShibaRidesAuthInterfaces.h"
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthui.h
+	<ncurses.h>
+	"../ShibaUI.h"
+	"../domains/ShibaRidesDomains.hpp"
+	<stdexcept>
+
+1573747697 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\shibaui.h
+	<ncurses.h>
+	<curses.h>
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\domains\shibaridesdomains.cpp
+	"ShibaRidesDomains.hpp"
+	<iostream>
+	<vector>
+
+1573714290 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthstubs.cpp
+	"ShibaRidesAuthStubs.h"
+	<curses.h>
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthstubs.h
+	"ShibaRidesAuthInterfaces.h"
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\domains\shibaridesdomainsut.cpp
+	"ShibaRidesDomainsUT.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\domains\shibaridesdomainsut.hpp
+	"ShibaRidesDomains.hpp"
+	<vector>
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\entities\shibaridesentities.cpp
+	"ShibaRidesEntities.hpp"
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\entities\shibaridesentities.hpp
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\entities\shibaridesentitiesut.cpp
+	"ShibaRidesEntitiesUT.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\entities\shibaridesentitiesut.hpp
+	"ShibaRidesEntities.hpp"
+	"../domains/ShibaRidesDomains.hpp"
+	<vector>
+
+1573750659 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\init\main.cpp
+	<iostream>
+	"ShibaRidesInitUI.h"
+	"../auth/ShibaRidesAuth.h"
+	"../users/ShibaRidersUser.h"
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\init\shibaridesinitui.h
+	"../ShibaUI.h"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauth.h
+	"ShibaRidesAuthCntr.h"
+	"ShibaRidesAuthInterfaces.h"
+	"ShibaRidesAuthStubs.h"
+	"ShibaRidesAuthUI.h"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridersuser.h
+	"ShibaRidesUsersCntr.hpp"
+	"ShibaRidesUsersInterfaces.hpp"
+	"ShibaRidesUsersStubs.hpp"
+	"ShibaRidesUsersUI.hpp"
+
+1573750404 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesuserscntr.hpp
+	"ShibaRidesUsersInterfaces.hpp"
+	"../domains/ShibaRidesDomains.hpp"
+
+1573701958 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesusersinterfaces.hpp
+	<stdexcept>
+	"../domains/ShibaRidesDomains.hpp"
+
+1573715987 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesusersstubs.hpp
+	"ShibaRidesUsersInterfaces.hpp"
+
+1573750185 c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesusersui.hpp
+	<ncurses.h>
+	<curses.h>
+	"../domains/ShibaRidesDomains.hpp"
+	<stdexcept>
+
+1573750479 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesuserscntr.cpp
+	"ShibaRidesUsersInterfaces.hpp"
+	"ShibaRidesUsersCntr.hpp"
+	"ShibaRidesUsersUI.hpp"
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\auth\shibaridesauthui.cpp
+	"ShibaRidesAuthUI.h"
+	<string>
+	<string.h>
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\init\shibaridesinitui.cpp
+	"ShibaRidesInitUI.h"
+	<string>
+	<string.h>
+
+1573701958 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\shibaui.cpp
+	"ShibaUI.h"
+
+1573716084 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesusersstubs.cpp
+	"ShibaRidesUsersStubs.hpp"
+	<curses.h>
+
+1573751672 source:c:\users\pedro fernandes\desktop\shibarides-dev\shibarides\users\shibaridesusersui.cpp
+	"ShibaRidesUsersUI.hpp"
+	"../ShibaUI.h"
+	<string>
+	<string.h>
+

@@ -12,6 +12,7 @@ void CntrUsersView::setServiceController(IUserServ *cntr){
 bool CntrUsersView::signin() throw (runtime_error){
 
     Email emailarg;
+    Nome nomealarg;
     Senha senhaarg;
     Telefone telefonearg;
     CPF cpfarg;
@@ -26,7 +27,7 @@ bool CntrUsersView::signin() throw (runtime_error){
         while(true){
             try{
                 // Tenta pegar informações do usuario
-                if(!UserSigninUI::show(emailarg, senhaarg, cpfarg, telefonearg, bancoarg, contaarg, agenciaarg)){
+                if(!UserSigninUI::show(emailarg, senhaarg,nomealarg, cpfarg, telefonearg, bancoarg, contaarg, agenciaarg)){
                     // Caso a função retorne falso, o usuario desistiu do login
                     return false;
                 }
@@ -53,5 +54,5 @@ bool CntrUsersView::signin() throw (runtime_error){
 }
 
 // Camada de serviço
-bool CntrUsersServ::edit(Nome nome, Email email, Senha senha, Telefone telefone, CPF cpf) throw(runtime_error){
+bool CntrUsersServ::edit(Email email, Senha senha, Nome nome, Telefone telefone, CPF cpf) throw(runtime_error){
 }

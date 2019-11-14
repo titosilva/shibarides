@@ -7,6 +7,7 @@
 #endif // __unix__
 
 #ifdef _WIN32
+    #include <curses.h>
 #endif // _WIN32
 
 #define ARROWDOWN    KEY_DOWN
