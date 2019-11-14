@@ -40,6 +40,7 @@ bool CntrAuthView::login(Email &email) throw (runtime_error){
             // Caso seja possível autenticar, retorna true
             // e salva em email o argumento obtido do usuario
             email = emailarg;
+            AuthInfoUI::show("Successfully Logged");
             return true;
         }else{
             AuthErrorUI::show("Email ou senha incorretos!");

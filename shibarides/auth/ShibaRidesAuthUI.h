@@ -35,4 +35,10 @@ public:
     static void show(string error);
 };
 
+class AuthInfoUI{
+public:
+    // Mostra mensagem de erro
+    static void show(string info);
+};
+
 #endif // SHIBA_AUTH_UI_H__

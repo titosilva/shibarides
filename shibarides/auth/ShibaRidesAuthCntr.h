@@ -21,7 +21,7 @@ public:
 
 class CntrAuthServ : public IAuthServ{
 public:
-    bool authenticate(Email email, Senha senha) throw(runtime_error);
+    bool authenticate(Email email, Senha senha) throw (runtime_error);
 };
 
 #endif // SHIBA_AUTH_CNTRL_H__

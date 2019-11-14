@@ -115,3 +115,19 @@ void AuthErrorUI::show(string error){
 
     attroff(COLOR_PAIR(1));
 }
+
+void AuthInfoUI::show(string info){
+    int x, y;
+    clear();
+    getmaxyx(stdscr, y, x);
+
+    attron(COLOR_PAIR(2));
+    char title[] = "Info";
+    mvprintw(y/2-2, x/2-strlen(title)/2, "%s", title);
+    mvprintw(y/2, x/2-strlen(info.c_str())/2, "%s", info.c_str());
+
+    // Espera o usuario apertar algum botao
+    while(!kbhit());
+
+    attroff(COLOR_PAIR(2));
+}

@@ -8,7 +8,7 @@
 class InitMainUI{
 public:
     // Define os possiveis resultados das selecoes do usuario
-    static const int INIT_MAIN_LOGIN=0, INIT_MAIN_SIGNUP=1, INIT_MAIN_EXIT=2;
+    static const int INIT_MAIN_LOGIN=0, INIT_MAIN_SIGNUP=1, INIT_MAIN_EXIT=2, INIT_MAIN_LIST=3;
     // Constroi a tela e retorna o selecionado
     static int show();
 };
@@ -16,8 +16,6 @@ public:
 // Tela apos o login
 class InitLoggedUI{
 public:
-    // Define os possiveis resultados das selecoes do usuario
-    static const int INIT_MAIN_LOGIN=0, INIT_MAIN_SIGNUP=1;
     // Constroi a tela e retorna o selecionado
     static int show();
 };

@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
     IAuthView *authview = new CntrAuthView();
-    IAuthServ *authserv = new CntrAuthServ();
+    IAuthServ *authserv = new StubAuthServ();
 
     authview->setServiceController(authserv);
 
