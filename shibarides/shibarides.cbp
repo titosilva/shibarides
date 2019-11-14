@@ -15,7 +15,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="ncurses" />
+					<Add library="C:/MinGW/PDCurses-3.9/wincon/pdcurses.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">

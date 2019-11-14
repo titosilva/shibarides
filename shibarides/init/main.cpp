@@ -38,6 +38,7 @@ int main(){
                 cntr = !authview->login(email);
                 break;
             case InitMainUI::INIT_MAIN_SIGNUP:
+                cntr = !userview->signin();
                 break;
             case InitMainUI::INIT_MAIN_EXIT:
                 cntr = false;

@@ -17,8 +17,7 @@ bool CntrAuthView::login(Email &email) throw (runtime_error){
     // ate que ele acerte o login ou desista da operação
     while(true){
         // Mostra a tela de login, obtem os dados
-        bool loop = true;
-        while(loop){
+        while(true){
             try{
                 // Tenta pegar informações do usuario
                 if(!AuthLoginUI::show(emailarg, senhaarg)){
@@ -26,7 +25,7 @@ bool CntrAuthView::login(Email &email) throw (runtime_error){
                     return false;
                 }
 
-                loop = false;
+                break;
             }catch(const invalid_argument &e){
                 // Caso seja lançada uma excessão, o usuário digitou dados invalidos
                 AuthErrorUI::show("Dados invalidos!");

@@ -9,8 +9,8 @@ bool UserSigninUI::show(Email &email, Senha &senha, CPF &cpf, Telefone &telefone
     // Armazena a atual selecao do usuario
     unsigned int sel = 0;
     // Char array para armazenar as entradas do usuario
-    char emailentry[80] = "", senhaentry[80] = "", cpfentry[11] = "", telefoneentry[12] = "", bancoentry[10] = "",
-     contaentry[10] = "", agenciaentry[10] = "";
+    char emailentry[80] = "", senhaentry[80] = "", cpfentry[80] = "", telefoneentry[80] = "", bancoentry[80] = "",
+     contaentry[80] = "", agenciaentry[80] = "";
 
     while(true){
         // Constroi a tela
