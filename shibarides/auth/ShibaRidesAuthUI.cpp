@@ -69,12 +69,7 @@ bool AuthLoginUI::show(Email &email, Senha &senha) throw (invalid_argument){
                     break;
                 case 2:
                     // Tentar o login
-                    try{
-                        email.setValue(emailentry);
-                        senha.setValue(senhaentry);
-                    }catch(const invalid_argument &e){
-                        AuthErrorUI::show(e.what());
-                    }
+                    return true;
                     break;
                 case 3:
                     // Cancelar
