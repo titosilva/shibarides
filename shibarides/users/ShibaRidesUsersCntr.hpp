@@ -1,25 +1,25 @@
 #ifndef SHIBARIDERSUSERCNTR_HPP_INCLUDED
 #define SHIBARIDERSUSERCNTR_HPP_INCLUDED
 
-#include "ShibaRidesUserInterfaces.h"
+#include "ShibaRidesUsersInterfaces.hpp"
 #include "../domains/ShibaRidesDomains.hpp"
 
 // Controladoras
 // Classe que implementa a interface IUserView
-class CntrUserView;
+class CntrUsersView;
 // Classe que implementa a interface IUserServ
-class CntrUserServ;
+class CntrUsersServ;
 
-class CntrUserView : public IUserView{
+class CntrUsersView : public IUserView{
 private:
     // Referencia para o servidor
     IUserServ *service;
 public:
-    bool edit(Email &email) throw (runtime_error);
+    bool signin() throw (runtime_error);
     void setServiceController(IUserServ *);
 };
 
-class CntrUserServ : public IUserServ{
+class CntrUsersServ : public IUserServ{
 public:
     bool edit(Nome nome, Email email, Senha senha, Telefone telefone, CPF cpf) throw(runtime_error);
 };
@@ -27,3 +27,4 @@ public:
 
 
 #endif // SHIBARIDERSUSERCNTR_HPP_INCLUDED
+

@@ -60,9 +60,13 @@
 		<Unit filename="rides/ShibaRidesRidesInterfaces.hpp" />
 		<Unit filename="rides/ShibaRidesRidesStubs.hpp" />
 		<Unit filename="rides/ShibaRidesRidesUI.hpp" />
+		<Unit filename="users/ShibaRidersUser.h" />
+		<Unit filename="users/ShibaRidesUsersCntr.cpp" />
 		<Unit filename="users/ShibaRidesUsersCntr.hpp" />
 		<Unit filename="users/ShibaRidesUsersInterfaces.hpp" />
+		<Unit filename="users/ShibaRidesUsersStubs.cpp" />
 		<Unit filename="users/ShibaRidesUsersStubs.hpp" />
+		<Unit filename="users/ShibaRidesUsersUI.cpp" />
 		<Unit filename="users/ShibaRidesUsersUI.hpp" />
 		<Extensions>
 			<code_completion />

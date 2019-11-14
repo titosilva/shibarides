@@ -3,11 +3,15 @@ using namespace std;
 
 #include "ShibaRidesInitUI.h"
 #include "../auth/ShibaRidesAuth.h"
+#include "../users/ShibaRidersUser.h"
 #include "../domains/ShibaRidesDomains.hpp"
 
 int main(){
     IAuthView *authview = new CntrAuthView();
     IAuthServ *authserv = new StubAuthServ();
+
+    IUserView *userview = new CntrUsersView();
+    IUserServ *userserv = new CntrUsersServ();
 
     authview->setServiceController(authserv);
 
